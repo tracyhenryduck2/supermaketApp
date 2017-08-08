@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="Denglu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>修改昵称</title>
+
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery1.9.js"></script>
+    <script type="text/javascript" src="js/henryLIB.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/mingchengxiugai.js"></script>
+    <style type="text/css">
+   .ce { padding: 5% 5% 5% 5%;color:rgb(162, 153, 153);}  
+   .edit-1 {    border-bottom: 1px solid #c8c8c8;    border-top: 1px solid #c8c8c8;
+    padding: 2% 5%;
+    color: #666;
+    font-size: 0.8em;
+    height: 32px;
+    line-height: 32px;}
+  .edit-1 .left {width: 49%;float: left;border-right: 1px solid #c8c8c8}
+    .edit-1 .right {width: 50%;float: left;}
+   .edit-1 input {font-size:1.1em;}
+   .edit-1 .wenzi2 {width: 18%;
+    float: left;
+    text-align: left;
+    color: black}
+   .edit-1 .content {    width: 70%;
+    float: right;
+    text-align: right;}
+    .edit-1 .delete {
+        width: 10%;
+    float: right;
+    }
+    .zhanghu {
+    width: 100%;
+    background: #FFF;
+}
+    </style>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+
+<body style="background:#ededf0" ng-controller="DengluController as Denglu">
+
+<div class="zhanghu" style="margin-top:20px">
+
+    <div class="edit-1">
+      <span class="wenzi2">昵称:</span>
+      <input type="text" class="wenben" ng-model="Denglu.username" ng-change="Denglu.changeword();" placeholder="请输入新的昵称">
+      <p class="delete" ng-show="Denglu.username!=null&&Denglu.username!=''" ng-click="Denglu.clear();"><img src="images/delete2.png"></p>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="anniu1 login" style=" margin-top:12%" ng-click="Denglu.submit();"><a>点击修改</a></div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray_blue">#DDDDFF</color>
+    <color name="dark_blue">#2f2f2f</color>  <!--视频播放界面的背景-->
+</resources>

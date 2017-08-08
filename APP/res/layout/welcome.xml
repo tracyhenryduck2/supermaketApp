@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+          <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+     
+          
+       <FrameLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="10dp" 
+           >
+           <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"  
+            >
+
+         <ImageView 
+             android:id="@+id/center"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring"
+             android:layout_centerHorizontal="true"
+             />
+  
+         <ImageView 
+             android:id="@+id/left"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring"
+             android:layout_toLeftOf="@id/center"
+             android:layout_marginRight="10dp"
+             />
+       
+         <ImageView 
+             android:id="@+id/right"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring"
+              android:layout_toRightOf="@id/center"
+              android:layout_marginLeft="10dp"
+             />
+
+        </RelativeLayout>
+        
+          <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"  
+            >
+
+         <ImageView 
+             android:id="@+id/center_selec"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring_selec"
+             android:layout_centerHorizontal="true"
+             android:visibility="invisible"
+             />
+  
+         <ImageView 
+             android:id="@+id/left_selec"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring_selec"
+             android:layout_toLeftOf="@id/center_selec"
+             android:layout_marginRight="10dp"
+             />
+       
+         <ImageView 
+             android:id="@+id/right_selec"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ring_selec"
+              android:layout_toRightOf="@id/center_selec"
+              android:layout_marginLeft="10dp"
+              android:visibility="invisible"
+             />
+
+        </RelativeLayout>   
+           
+       </FrameLayout>   
+ 
+</RelativeLayout>

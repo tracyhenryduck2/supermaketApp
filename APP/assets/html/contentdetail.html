@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="ContentDetail">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title></title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/contentdetail.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body ng-controller="ContentDetailController as ContentDetail">
+<div ng-repeat="map in ContentDetail.listShow">
+<div  class="dongtai">{{map.title}}</div>
+<div class="fujian" ng-show="map.file_url!=''"><span>附件</span><a ng-href="http://{{ContentDetail.fileurl}}/{{map.file_url}}">{{map.file_url}}</a></div>
+</div>
+<div class="dongtai2" id="content"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html  ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>积分</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jifen.js"></script>
+</head>
+<body ng-controller="JianguanController as Jianguan" style="background:#f9f5f5">
+
+<div class="total-jifen">
+   <p class="wode">我的积分</p>
+   <p class="jifen">{{Jianguan.user.point}}</p>
+</div>
+
+  <div class="itemonline" ng-click="Jianguan.duihuan()">
+      <p class="icon"><img src="images/duihuan2.png"></p>
+    <p class="title">兑换</p>
+    <p class="content">  
+      <span class="arrow_right"><img src="images/anniu1.png"   alt=""/></span>
+    </p>
+  </div>
+
+
+  <div class="itemonline" ng-click="Jianguan.log()">
+      <p class="icon"><img src="images/duihuanjilu.png"></p>
+    <p class="title">兑换记录</p>
+    <p class="content">  
+      <span class="arrow_right"><img src="images/anniu1.png"   alt=""/></span>
+    </p>
+  </div>
+
+    <div class="itemonline" ng-click="Jianguan.guize()" style="margin-top:30px">
+      <p class="icon"><img src="images/yiwen.png"></p>
+    <p class="title">积分规则</p>
+    <p class="content">  
+      <span class="arrow_right"><img src="images/anniu1.png"   alt=""/></span>
+    </p>
+  </div>
+
+</body>
+</html>

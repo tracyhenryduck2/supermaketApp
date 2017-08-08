@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--字体推荐使用SP-->
+	<dimen name="rtspInfoShow">15sp</dimen>
+	<dimen name="textSize">16sp</dimen>
+	<dimen name="bigTextSize">20sp</dimen>
+	<dimen name="layout_margin_right">5dp</dimen>
+	<dimen name="file_padding_left">10dp</dimen>
+	<dimen name="textview_layout_margin_right2">2dp</dimen>
+</resources>

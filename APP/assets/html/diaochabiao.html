@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="Research">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>超市满意度调查表</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/diaochabiao.js"></script>
+<script type="text/javascript" src="js/henryLIB.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+	.diaocha4 textarea {width: 100%;border: 1px solid #D6CDCD;font-size: 1.3em}
+	.dianming {width: 33%;float: left;}
+</style>
+</head>
+<body style="background:#fafafa" ng-controller="ResearchController as Research">
+<div class="diaocha" ng-repeat="map in Research.list">
+  <div class="diaocha1"> <span style=" color:#00a9c8">Q{{$index+1}}.</span>{{map.content}}</div>
+  <div class="diancha2">
+    <div ng-repeat="map3 in Research.storelist" class="store">
+    <div class="dianming" ng-show="map.type==0">{{map3.name}}</div>
+    <div class="diaocha3" ng-repeat="map2 in map.chooseList" ng-show="map.type==0">
+      <input type="radio" ng-value="map2.id">
+      {{map2.content}}</div></div>
+    <div class="diaocha4" ng-show="map.type==1"><textarea rows="2" ng-model="map.answer"></textarea></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div style="width: 100%;height: 80px;">
+<div class="anniu1" ng-show="Research.list.length>0" ng-click="Research.edit()"><a>提交</a></div>
+</div>
+</body>
+</html>

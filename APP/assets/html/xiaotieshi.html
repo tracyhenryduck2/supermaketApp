@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="Xiaotieshi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>小贴士</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/xiaotieshi.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body ng-controller="XiaotieshiController as Xiaotieshi">
+
+<div class="ship3" ng-repeat="map in Xiaotieshi.list" ng-click="Xiaotieshi.detail(map.id,map.type_id)">
+  <div  class="xinwenbiaoti1"><img ng-src="http://{{Xiaotieshi.url}}/supermarket_images/news/{{map.pic_url}}" alt=""/></div>
+  <div  class="xinwenwenzi1">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+                   <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+</body>
+</html>

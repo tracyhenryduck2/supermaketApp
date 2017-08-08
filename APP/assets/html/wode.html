@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>我的</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/wode.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</head>
+
+<body ng-controller="JianguanController as Jianguan">
+<div class="wode-top">
+    <div class="left">
+       <p><span>昵称:{{Jianguan.user.nickname}}</span></p>
+       <p><span>ID:</span><span ng-show="Jianguan.user!=null">{{Jianguan.user.id+60000}}</span></p>
+    </div>
+    <div class="right">
+<!--         <img src="images/guohui.png"/> -->
+          <img ng-if="Jianguan.user!=null&&Jianguan.user.avatar!=''&&Jianguan.user.avatar.indexOf('http:')==-1" ng-click="Jianguan.showpic();" ng-src="http://{{Jianguan.url}}/{{Jianguan.user.avatar}}" style="border-radius: 50%;">
+          <img ng-if="Jianguan.user!=null&&Jianguan.user.avatar!=''&&Jianguan.user.avatar.indexOf('http:')!=-1" ng-click="Jianguan.showpic();" ng-src="{{Jianguan.user.avatar}}" style="border-radius: 50%;">
+  <img ng-if="Jianguan.user==null || Jianguan.user.avatar==''" ng-src="images/profle.png" style="border-radius: 50%;">
+    </div>
+       <div class="clear"></div>
+</div>
+<div class="wode-part1">
+   <div class="child-part1" ng-click="Jianguan.shoucang();">
+      <p class="myimg"><img src="images/app-5_03.png"/></p><p class="wenzi">收藏</p>
+   </div>
+   <div class="child-part2" ng-click="Jianguan.youhuiquan();">
+      <p class="myimg"><img src="images/app-5_05.png"/></p><p class="wenzi">优惠券</p>
+   </div>
+   <div class="child-part3" ng-click="Jianguan.gotomyliuyan();">
+      <p class="myimg"><img src="images/app-5_09.png"/></p><p class="wenzi">我的留言</p>
+   </div>
+   <div class="child-part4" ng-click="Jianguan.jifen();">
+      <p class="myimg"><img src="images/app-5_10.png"/></p><p class="wenzi">我的积分</p>
+   </div>
+   <div class="clear"></div>
+</div>
+
+<div class="wode-part2">
+   <div class="child-part1"  ng-click="Jianguan.vip();">
+      <p class="myimg"><img src="images/app-5_13.png"/></p><p class="wenzi" style="margin-top:2%">会员特权</p>
+   </div>
+   <div class="child-part2" ng-click="Jianguan.guanyu();">
+      <p class="myimg"><img src="images/app-5_14.png"/></p><p class="wenzi" style="margin-top:2%">关于</p>
+   </div>
+   <div class="child-part3" ng-click="Jianguan.setting();">
+      <p class="myimg"><img src="images/app-5_17.png"/></p><p class="wenzi">设置</p>
+   </div>
+   <div class="child-part4">
+      <p style="width:100%;text-align:center"></p>
+   </div>
+   <div class="clear"></div>
+</div>
+
+<div class="anniu3" ng-click="Jianguan.logout();" ng-show="Jianguan.user!=null">退出登录</div><div ng-click="Jianguan.login();" class="anniu3" ng-show="Jianguan.user==null">点击登录</div>
+</body>
+</html>

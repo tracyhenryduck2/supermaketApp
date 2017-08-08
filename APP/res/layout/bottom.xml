@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal" android:background="@color/title_bg">
+    
+   <RadioGroup
+        android:id="@+id/bottomRg"  
+        android:layout_width="0dip"  
+        android:layout_height="wrap_content"  
+        android:layout_weight="1"  
+        android:orientation="horizontal" >  
+  
+        <RadioButton  
+            android:id="@+id/rb0"  
+            style="@style/rg_btn_style"  
+            android:checked="true"  
+            android:drawableTop="@drawable/ioc2_17"  
+            android:text="首页" />  
+  
+        <RadioButton  
+            android:id="@+id/rb1"  
+            style="@style/rg_btn_style"  
+            android:drawableTop="@drawable/ioc_19"  
+            android:text="公示" />  
+  
+        <RadioButton  
+            android:id="@+id/rb2"  
+            style="@style/rg_btn_style"  
+            android:drawableTop="@drawable/ioc_21"  
+            android:text="直通车" />  
+        <RadioButton  
+            android:id="@+id/rb3"  
+            style="@style/rg_btn_style"  
+            android:drawableTop="@drawable/ioc_23"  
+            android:text="我的" />
+
+    </RadioGroup>
+
+</LinearLayout>

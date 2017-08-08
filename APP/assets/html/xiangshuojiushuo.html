@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="Say">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>想说就说</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/xiangshuojiushuo.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+  .lastshuo {
+    margin-bottom: 20%
+  }
+  .shuo2 img { border-radius: 44px;}
+</style>
+</head>
+<body style="background:#fafafa" ng-controller="SayController as Say">
+<div class="shuo" ng-repeat="map in Say.saylist" ng-class="{'lastshuo':$last==true}">
+  <div class="shuo1">
+    <div class="shuo2"><img ng-src="{{map.headimgurl | headimgurlFilter}}"   alt=""/></div>
+    <div class="shuo3"><p style="color:#ff9a06">{{map.nickname | nicknameFilter}}</p><p class="sad">{{map.content}}</p></div>
+    <div  class="shuo4">{{$index+1}}</div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div style="position:fixed;  bottom:0; width:90%; padding:5%;background-color: #FAFAFA;"><input type="text" placeholder="想说点什么呢" class="input" ng-model="Say.Mycomment"><div ng-click="Say.submitComment()" style="float:right; line-height:40px; font-size:1.5em; color:#656565"><a style="color:#656565;font-size: 0.7em;">评论</a></div></div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html ng-app="Index">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>首页</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/jquery.vticker-min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/yxMobileSlider.js"></script>
+<script type="text/javascript" src="js/yxMobileSlider2.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+    .focus span {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: white;
+  font-size: 0;
+}
+     .focus span.current {
+  background: red;
+}
+
+.current{
+  color:#e9a81a;
+}
+.news-container img {width: 24px;margin-left: 15px}
+.news-container a {color: red;font-size: 0.9em}
+.sifenzhi {width: 24%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    float: left;
+    background-color: white;
+    margin-bottom: 3px;}
+</style>
+<script type="text/javascript">
+  var surl=getPath();
+  $(function(){
+       $.ajax({
+      type:"post",
+      url:"http://"+surl+"/super_market/app/SuperMarketNew!hotlist.action",
+      dataType:"text",
+      success:function(data){
+          var ds = eval("("+data+")");
+          console.log(ds);
+          htmlstr='';
+          $.each(ds,function(index,value){
+
+        htmlstr+='<li style="height:30px;line-height: 30px;" onclick="gotodetial('+value.id+');"><img src="images/laba.png"><a>'+value.title+'</a><br /></li>';
+        });
+          $(".news-container ul").html(htmlstr);
+                          //滚动新闻条
+            $('.news-container').vTicker({
+                speed: 500,
+                pause: 3000,
+                showItems: 1,
+                mousePause: false,
+                height: 0,
+                direction: 'up'
+            });
+      },
+     error:function(data){
+
+     }
+      });
+      
+
+  })
+
+ function gotodetial(id){
+     client.openShoucang("xinxidongtai.html?newsId="+id);
+ }
+</script>
+</head>
+
+<body ng-controller="IndexController as Index" style="background-color: #f6f6f6;">
+<div class="news-container" style="position:absolute;top:0px;left:0px;    background: rgba(76, 76, 76, 0.68);width: 100%; margin: auto;z-index:1000">
+<ul style="width:100%">
+<!--   <li style="height:30px;line-height: 30px;"><img src="images/laba.png"><a>乐购大减价2</a><br /></li>
+  <li style="height:30px;line-height: 30px;"><img src="images/laba.png"><a>乐购大减价3</a><br /></li>
+  <li style="height:30px;line-height: 30px;"><img src="images/laba.png"><a>乐购大减价4</a><br /></li>
+  <li style="height:30px;line-height: 30px;"><img src="images/laba.png"><a>乐购大减价5</a><br /></li> -->
+</ul>
+</div>
+ <div class="slider">
+ <ul id="ceshi">
+  <li><img class="banner_img" src="images/loading.gif"  alt=""  /></li>
+<!--  <li><img class="banner_img" src="images/find-loading.svg"  alt="" /></li> -->
+  </ul>
+ </div>
+
+
+
+
+<div  class="jg"><img src="images/ioc_03.png"  alt=""/></div>
+ <div class="slider2" style="padding: 5% 0% 0% 0%;">
+ <ul id="ceshi2">
+  <li><img class="banner_img" src="images/loading.gif"  alt=""  /></li>
+  </ul>
+ </div>
+
+<div class="banner1"><img src="images/ioc_06.png"   alt=""/></div>
+<div  class="tongzi"><a ng-class="{'current':Index.cds==1}" ng-click="Index.change(1)"><span class="tubiao"><img ng-show="Index.cds!=1" src="images/zcfg.png"><img ng-show="Index.cds==1" src="images/zcfg_s.png"></span>政策法规</a><a ng-class="{'current':Index.cds==2}" ng-click="Index.change(2)"><span class="tubiao"><img ng-show="Index.cds!=2" src="images/tzgg.png"><img ng-show="Index.cds==2" src="images/tzgg_s.png"></span>通知公告</a><a ng-class="{'current':Index.cds==3}" ng-click="Index.change(3)"><span class="tubiao"><img ng-show="Index.cds!=3" src="images/jgdt.png"><img ng-show="Index.cds==3" src="images/jgdt_s.png"></span>监管动态</a>
+<div class="clear"></div>
+</div>
+ <div ng-show="Index.showLoading"><img src="images/loading.gif"></div>
+<div class="xinwen1" ng-repeat="map in Index.zhenglist" ng-show="Index.cds==1" ng-click="Index.gotoDetail(map.id,map.type_id)">
+  <!-- <div class="xinwenbiaoti1"><img ng-src="http://{{Index.url}}/supermarket_images/news/{{map.pic_url}}"   alt=""/></div> -->
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+    <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="xinwen1" ng-repeat="map in Index.tonglist" ng-show="Index.cds==2" ng-click="Index.gotoDetail(map.id,map.type_id)">
+ <!--  <div class="xinwenbiaoti1"><img ng-src="http://{{Index.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div> -->
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+        <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="xinwen1" ng-repeat="map in Index.shilist" ng-show="Index.cds==3" ng-click="Index.gotoDetail(map.id,map.type_id)">
+  <div class="xinwenbiaoti1"><img ng-if="map.pic_url==''" src="images/default.png"   alt=""/><img ng-if="map.pic_url!=''" ng-src="http://{{Index.url}}/supermarket_images/news/{{map.pic_url}}"   alt=""/></div>
+  <div  class="xinwenwenzi1">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+            <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="anniu" onclick="Index.gotoMorejianguan()"><img style="    width: 15px;margin-right: 7px;" src="images/ioc_13.png"><a>更多内容</a></div>
+
+
+</body>
+ <script type="text/javascript">
+$(".slider").yxMobileSlider({width:640,height:283,during:3000});
+$(".slider2").yxMobileSlider2({width:640,height:283,during:300000});
+
+
+$(".focus").css("display","block");
+ </script>
+</html>

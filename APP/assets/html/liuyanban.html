@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="Tousu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/liuyanban.js"></script>
+<title>留言板</title>
+<style type="text/css">
+	.toubu {padding-top: 10%;background: #aeedf6;width: 100%}
+	.im {width:30%;margin: 0 auto }
+	.ads {width:80%;margin: 0 auto;text-align: center;margin-top: 10px; }
+	.points {width:60%;margin: 0 auto;text-align: center;margin-top: 10px;}
+	.points img {display: block;float: left}
+	  #add {    width: 100%;
+    font-size: 1.7em;
+    background: #50def3;
+    position: fixed;
+    bottom: 0px;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    }
+    a {
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+</style>
+</head>
+
+<body ng-controller="TousuController as Tousu" style="background:#f7f7f7">
+
+<div style="    width: 83%;padding: 5%;font-size: 1.2em;"> <textarea style="      height: 6.4em;     font-size: 1.2em;width: 100%;padding: 4%;" class="textsty textarea12" ng-model="Tousu.content" placeholder="请留下您宝贵的意见和建议，我们将努力改进(不少于5个字)" name="content" resize="none"></textarea></div>
+
+<!-- <div style="    width: 83%;padding: 5%;font-size: 1.2em;"> <textarea style="       font-size: 1.2em;width: 100%;padding: 4%;" class="textsty textarea12" ng-model="Tousu.phone" placeholder="请留下您的手机号" name="content" resize="none"></textarea></div> -->
+        <div class="item item-btns" ng-click="Tousu.submit()" style="    width: 90%;margin-top: 10px;margin: 0 auto;text-align: center;">
+            <a id="loginSubmit" class="btn-login " style="background:#BB0F1B;    padding: 3% 0%;">提交</a>
+        </div>
+</body>
+</html>

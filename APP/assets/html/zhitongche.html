@@ -1,0 +1,255 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>直通车</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/zhitongche.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+
+   //反馈留言板
+	function goto1(){
+	   progress("Show");
+       var a= client.readGlobalInfo("secret"); 
+		if(a==null || a=="")
+		{
+		  client.saveNotGlobalInfo("addr","xiangshuojiushuo.html");
+		  client.LoginFromWX();
+		}
+		else
+		{
+            check();
+		}
+
+	}
+
+	//问卷调查
+		function goto2(){
+       progress("Show");
+       var a= client.readGlobalInfo("secret"); 
+		if(a==null || a=="")
+		{
+		  client.saveNotGlobalInfo("addr","diaochabiao.html");
+		  client.LoginFromWX();
+		}
+		else
+		{
+		       var b= client.readGlobalInfo("secret");
+		       var secret =eval("("+b+")");
+		      $.ajax({
+		        type:"get",
+		        url:"https://api.weixin.qq.com/sns/auth?access_token="+secret.access_token+"&openid="+secret.openid,
+		        success:function(data){
+		          var response = eval("("+data+")");
+		           if(response.errcode==0) {
+		            progress("Dismiss");
+		            client.open("diaochabiao.html",1);}
+		           else {
+		          progress("Dismiss");
+		           	client.saveGlobalInfo("secret",null);
+		            client.saveGlobalInfo("myinfo",null);
+		            client.saveNotGlobalInfo("addr","diaochabiao.html");
+				    client.LoginFromWX();
+		           }
+
+		        },
+		          error: function () {
+		             progress("Error","网络连接失败");
+		            }
+		        });
+		}
+	}
+		function goto3(){
+		client.open("login.html",1);
+	}
+
+
+    function check(){
+       
+       var a= client.readGlobalInfo("secret");
+       var secret =eval("("+a+")");
+      $.ajax({
+        type:"get",
+        url:"https://api.weixin.qq.com/sns/auth?access_token="+secret.access_token+"&openid="+secret.openid,
+        success:function(data){
+
+          var response = eval("("+data+")");
+           if(response.errcode==0) {
+              progress("Dismiss");
+            client.open("xiangshuojiushuo.html",1);}
+           else {
+           	progress("Dismiss");
+           	client.saveGlobalInfo("secret",null);
+            client.saveGlobalInfo("myinfo",null);
+            client.saveNotGlobalInfo("addr","xiangshuojiushuo.html");
+		    client.LoginFromWX();
+           }
+
+        },
+          error: function () {
+             progress("Error","网络连接失败");
+            }
+        });
+
+       
+          
+    }
+
+   
+   function onResume(){
+   	     progress("Dismiss");
+   }
+
+</script>
+</head>
+<style>
+/*全局样式*/
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-drag: none;
+}
+a, img {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+}
+html, body, table, tr, td, span, ul, li {
+	margin: 0 auto;
+	padding: 0;
+}
+body {
+	background: white
+}
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 0px;
+}
+ul, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+}
+.clearboth {
+	clear: both;
+	width: 100%;
+	margin: 0;
+	height: 0px;
+	font-size: 0px;
+	line-height: 0px;
+}
+.space20 {
+	clear: both;
+	width: 100%;
+	margin: 0;
+	height: 15px;
+	font-size: 0px;
+	line-height: 0px;
+}
+/*通用样式*/
+.content_box {
+	width: 99%;
+	margin: 0 auto;
+	border: 1px solid #e1e1e1;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.title {
+	float: left;
+	width: 92%;
+	margin: 0 auto;
+	padding: 3% 4% 4% 4%;
+	color: #666;
+	background: #e6e6e6;
+	    margin-bottom: 3px;
+}
+.title3 {
+	float: left;
+	width: 92%;
+	margin: 0 auto;
+	padding: 3% 4% 4% 4%;
+	color: #666;
+	background: #FFF
+}
+
+.title_name {
+	float: left;
+	width: 74%;
+	font-size: 0.9em;
+	font-family: 微软雅黑;
+	text-align: left;
+	line-height: 1em;
+	margin-top: 2%;
+	padding-left: 1%;
+}
+.title1 {
+	float: left;
+	width: 8%;
+	padding-left: 2%
+}
+.title2 {
+	float: left;
+	width: 4%;
+	margin-top: 1.5%
+}
+.title_more {
+	float: left;
+	width: 10%;
+	text-align: right;
+	padding-top: 3%;
+}
+.xian {
+	border-bottom: 1px solid #eaeaea;
+	width: 100%;
+	float: right;
+	padding-top: 4%;
+}
+.xian1 {
+	width: 100%;
+	float: right;
+	padding-top: 4%;
+}
+.navContent {
+	background: #FFF;
+	width: 100%;
+	float: left;
+	display: none;
+}
+#top .right {width:51.7%;float: right;}
+#top .left {float: left;width: 28%;margin-top: 13%;margin-left: 3%;}
+#top .wenzi {    width: 33%;top: 4%;left: 18%;position: absolute;}
+</style>
+
+<body ng-controller="JianguanController as Jianguan">
+<div class="md">
+<div id="top" style="width:100%;background:#BB0F1B;position:relative">
+    <div class="wenzi"><img src="images/dianwo-wenzi.png"></div>
+	<div class="left" ng-click="Jianguan.gotoWeb();"><img src="images/dianwo.jpg"></div>
+	<div class="right"><img id="top-img" src="images/app-4.jpg"></div>
+	<div class="clear"></div>
+</div>
+</div>
+<div id="wrap">
+  <div  class="title" ng-click="Jianguan.diaocha();"><span class="title1"><img src="images/dianwo_03.png" ></span><span class="title2"><img src="images/heidian.jpg" ></span><span class="title_name">问卷调查</span></div>
+
+<!--   <div  class="title" ng-click="Jianguan.paihangbang();"><span class="title1"><img src="images/dianwo_06.png" ></span><span class="title2"><img src="images/heidian.jpg" ></span><span class="title_name">超市排行榜</span></div> -->
+    <div class="title" ng-click="Jianguan.liuyan();"><span class="title1"><img src="images/dianwo_08.png" ></span><span class="title2"><img src="images/heidian.jpg" ></span><span class="title_name">留言板</span></div> 
+</div>
+<div style="width:100%; float:left; height:15px;"></div>
+</body>
+</html>

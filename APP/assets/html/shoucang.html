@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>我的收藏</title>
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/shoucang.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  .current{  color:#e9a81a;}
+  .head {position:fixed;left:0px;top:0px;width:100%;background-color: white;}
+
+</style>
+</head>
+
+<body ng-controller="JianguanController as Jianguan">
+
+<!-- <div class="ship3" ng-repeat="map in Jianguan.list" ng-show="Jianguan.listId==1" ng-click="Jianguan.Detail(map.id,1)">
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="ship3" ng-repeat="map in Jianguan.tonglist" ng-show="Jianguan.listId==2" ng-click="Jianguan.Detail(map.id,2)">
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div> -->
+<div id="no-data"></div>
+<div class="ship3" ng-repeat="map in Jianguan.list" ng-click="Jianguan.Detail(map.id,map.type_id,map.type)">
+  <div  class="xinwenbiaoti1" ng-show="map.type_id!=null&&map.type_id>2&&map.type_id<7"><img ng-src="http://{{Jianguan.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div>
+  <div  ng-class="{'xinwenwenzi2':map.type_id!=null&&(map.type_id<=2||map.type_id>=7),'xinwenwenzi1':map.type_id!=null&&map.type_id>2&&map.type_id<7}">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+</body>
+</html>

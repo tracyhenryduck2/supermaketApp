@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="Supermarket">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>排行榜</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/paihangbang.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body ng-controller="SupermarketController as Supermarket">
+
+<div class="good" ng-show="Supermarket.marketGoodList!=null&&Supermarket.marketGoodList.length>0">
+<div  class="tongzi2">先进超市</div>
+	  <div class="pai1" ng-repeat="map in Supermarket.marketGoodList"><!-- <img ng-src="http://{{Supermarket.url}}/supermarket_images/market/{{map.head_pic}}"  alt="" /> -->
+    <p class="pai3">{{map.name}}</p>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<div class="good" ng-show="Supermarket.marketAdvanceList!=null&&Supermarket.marketAdvanceList.length>0">
+<div  class="tongzi2">进步超市</div>
+      <div class="pai1" ng-repeat="map in Supermarket.marketAdvanceList"><!-- <img ng-src="http://{{Supermarket.url}}/supermarket_images/market/{{map.head_pic}}"  alt="" /> -->
+    <p class="pai3">{{map.name}}</p>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="good" ng-show="Supermarket.marketAdmonishingList!=null&&Supermarket.marketAdmonishingList.length>0">
+        <div  class="tongzi2">诫勉超市</div>
+	  <div class="pai1" ng-repeat="map in Supermarket.marketAdmonishingList"><!-- <img ng-src="http://{{Supermarket.url}}/supermarket_images/market/{{map.head_pic}}"  alt="" /> -->
+    <p class="pai3" style="color:red">{{map.name}}</p>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="anniu" onclick="Supermarket.gotoInstruction()" style="width:54%"><a>查看排行榜说明</a></div>
+
+
+</body>
+</html>

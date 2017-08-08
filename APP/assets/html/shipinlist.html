@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="Video">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>视频列表</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+  p.videotitle {line-height:44px; color:#5e5e5e; text-align:center}
+</style>
+</head>
+<body ng-controller="VideoController as Video">
+  <div ng-repeat="map in Video.list" class="ship1" ng-click="Video.gotoVideo(map.url)"><img ng-if="map.pic_url==''" src="images/default2.jpg"  alt=""/><img ng-if="map.pic_url!=''" ng-src="http://{{Video.url}}/supermarket_images/market/{{map.pic_url}}"  alt=""/><p class="videotitle">{{map.name}}</p></div>
+</body>
+</html>

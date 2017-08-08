@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app="Denglu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>修改密码</title>
+
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery1.9.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/henryLIB.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/updatecode.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+
+      .item.item-password {  
+    border-radius: 3px;background: white;    border-bottom: 1px solid #c8c8c8;}
+
+
+ .st .left {  float: left;width: 40%;padding: 4.6%;border-bottom: 1px solid #d7d7d7;border-right: 1px solid #d7d7d7;text-align: center;color: #7a7a7c}
+  .st .right { float: left;width: 41%;padding: 4.6%;border-bottom: 1px solid #d7d7d7;text-align: center;color: #7a7a7c}
+  .st  .current {background: white;padding: 4.6%;color: #7de6f6}
+  .accesstomail {width: 30%;background: #999999;color: white;border-radius: 5px}
+
+  .main {
+    padding: 20px 15px 0;
+}
+.main .item .txt-password {
+    padding: 0% 3%;
+}
+
+.main .item .txt-input {
+    width: 90%;
+    height: 48px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    background: #fff;
+    font-family: '\5fae\8f6f\96c5\9ed1';
+    font-size: 16px;
+    color: #252525;
+    -webkit-appearance: none;
+}
+.main .item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+.main .item-btns .btn-next, .main .item-btns .btn-login {
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    border-radius: 3px;
+    background: #7de6f6;
+    text-decoration: none;
+    line-height: 48px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+}
+    </style>
+</head>
+<body style="background:#f7f7f7" ng-controller="DengluController as Denglu">
+<div class="common-wrapper" style="background:#f7f7f7">
+    <div class="main" style="padding-left:0px;padding-right:0px;">
+    <form action="" method="post" id="frm_login">
+
+        <div class="item item-password">
+			<input id="password" name="password" class="txt-input txt-password ciphertext" type="password" ng-model="Denglu.initpassword" placeholder="当前密码" style="margin-bottom: 0px;border:none;">
+            <b class="input-close" style="display: none;"></b> 
+        </div>
+       <div class="item item-password">
+            <input id="password" name="password" class="txt-input txt-password ciphertext" type="password" ng-model="Denglu.newpassword" placeholder="新密码" style="margin-bottom: 0px;width:70%;border:none;">
+            <b class="tp-btn btn-off"></b>
+            <b class="input-close" style="display: none;"></b> 
+        </div>
+    <div class="item item-password">
+            <input id="password" name="password" class="txt-input txt-password ciphertext" type="password" ng-model="Denglu.confirmpassword" placeholder="确认密码" style="margin-bottom: 0px;border:none;">
+            <b class="input-close" style="display: none;"></b> 
+        </div>
+        <div class="item item-btns" ng-click="Denglu.submit()" style="width:90%;margin-top:10px">
+            <a id="loginSubmit" class="btn-login " style="background:#BB0F1B; ">提交</a>
+        </div>
+		</form>		        
+	</div>
+</div>
+</body>
+</html>

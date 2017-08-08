@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>兑换</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript">
+	function callto() {
+		 client.call("tel:0574-27974324");
+	}
+</script>
+</head>
+<body ng-controller="JianguanController as Jianguan">
+
+<div id="no-data">
+  <div style='margin:40px auto;position: relative;text-align:center;width: 50%;'><span style='font-size:1em;color:rgb(141,141,141);'>兑换失败!</span><img  style='margin-top: 50px;position: relative;height:auto' src='images/wujifen.png' width='162' height='166' /><p style='color:rgb(141,141,141);margin-top:40px'>如有疑问请联系客服</p><p onclick="callto();"  style='color:black;;margin-top:4px'>0574-2797-4324</p></div>
+</div>
+</body>
+</html>

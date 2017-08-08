@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_activity_main">ViewEye MCU</string>    
+    <string name="ipconfig_title">Server Settings</string>
+    <string name="svr_ip">Server addr</string>
+    <string name="svr_port">Server port</string>
+    <string name="ipCannotBeNull">Server port</string>
+    <string name="portwrong">Wrong port</string>
+    
+	<string name="menu_back">Back</string>
+	<string name="menu_settings">Setting</string>
+	<string name="label_name">ViewEye MCU</string>
+	<string name="app_name">ViewEye MCU</string>
+	<string name="videoPlayerTitle">ViewEye MCU</string>
+	<string name="loginLogin">Login</string>
+	<string name="loginNetSetting">Setting</string>
+	<string name="loginExi">Back</string>
+	<string name="loginUserName">Name:</string>
+	<string name="loginPassword">PWD:&#160;</string>
+	<string name="udpConnect">UDP</string>
+	<string name="tcpConnect">TCP</string>
+	<string name="loginPlatoform">Domain:</string>
+	<string name="defalutLoginUserName">Please input userName</string>
+	<string name="defalutLoginPassword">Please input password</string>
+	<string name="defalutLoginPlatform">Domain(optional)</string>
+	<string name="loginAutoUpdate">Auto upgrading configuration file</string>
+	<string name="networkSettingTitle">Net Set</string>
+	<string name="networkSettingAutoLogin">Auto Login</string>
+	<string name="networkSettingBack">Return</string>
+	<string name="networkSettingSave">Save</string>
+	<string name="networkSettingWPUIP">WPU IP:</string>
+	<string name="networkSettingNetType">Choose Network</string>
+	<string name="networkSettingdefaultNetType">Default Network</string>
+	<string name="WPUIP">Please input WPU Address</string>
+	 <string name="soundSwitching">Sound Switch:</string>
+	<string name="autoLogin">Auto Login</string>
+	<string name="publicAccount">Public logging</string>
+	<string name="filePath">Picture Path:</string>
+	<string name="netConnectType">Network Type:</string>
+	<string name="defaultFilePath">Picture Save path:</string>
+	<string name="udpFirst">UDP</string>
+	<string name="tcpFirst">TCP</string>
+	<string name="wpuBack">Return</string>
+	<string name="networkSettingCloundStepControl">PTZ Step:</string>
+	<string name="networkSettingCameraStepControl">Lens Step:</string>
+	<string name="remoteIP">Remote Address</string>
+	<string name="connect">Connecting</string>
+	<string name="eixtconnect">Exit</string>
+	<string name="menu_start">Start</string>
+	<string name="checkNetwork">Network</string>
+	<string name="browser">Browser</string>
+	<string name="setNetworkTitle">Network Setting</string>
+	<string name="systemNetworkSetting">Network Setting</string>
+	<string name="updateVersion">Version Update</string>
+	<string name="systemNetworkSettingExit">Exit</string>
+	<string name="setNetworkMessage">For mistake network or network unavailable,connecting failed, please check mobile,or login again later on</string>
+	<string name="setNetworkPositive">Setting</string>
+	<string name="setNetworkNegative">Cancel</string>
+	<string name="SUCCESS">Success</string>
+	<string name="MIN_LIMIT">Unkown Code</string>
+	
+	<string name="opensettingmistake">Open Setting Mistake,Please Check Your Network</string>
+    <string name="login_progress_tip">Logging, Please Wait...</string>
+	<string name="Realtime_Monitor">Realtime Monitor</string>
+    <string name="Alarm_Search">Alarm Search</string>
+    <string name="State">State:</string>
+    <string name="Loading">Loading...</string>
+    <string name="Refresh">Refresh</string>
+    <string name="NetworkExceptionClickToLoad">Network error,Click to load More</string>
+    <string name="back">Back</string>
+    <string name="alarm_type">Alarm Type</string>
+	<string name="camera_search_result">Camera Search List</string>
+	<string name="alarm_occur_time">Occur Time:</string>
+    <string name="past_alarm">Past Alarm</string>
+    <string name="cur_alarm">Cur Alarm</string>
+	<string name="alarm_level">Level</string>
+    <string name="device_name">Device</string>
+    <string name="fault_type">Fault</string>
+    <string name="occur_time">Occur Time</string>
+    <string name="whether_affirm">Affirmed</string>
+    <string name="nextOfficeTip">>></string>
+    
+	<!-- 视频播放界面的提示信息 -->
+	<string name="ZTENV_ERROR_RTSP_URL">WPU address error... </string>
+	<string name="blank" />
+	<string name="receivingData">Receiving data please wait...</string>
+	<string name="ZTENV_ERROR_RTSP_SOCKET_SETUP">Unable connect TO remote address, please confirm connecting validly</string>
+	<string name="ZTENV_RECEIVING_NET_DATA">Initializing network,please wait...</string>
+	<string name="NOTIFY_VIDEO_RTSP_DESCRIBE_CONNECT_SUCCESS_INFO">Connecting successful...</string>
+	<string name="ZTENV_ERROR_IOEXCEPTION">Please request video again...</string>
+	<string name="ZTENV_ERROR_INITIAL_DATASOCKET">Initializing network error...</string>
+	<string name="NOTIFY_VIDEO_RTSP_PLAY_CONNECT_SUCCESS_INFO">Connecting finished...</string>
+	<string name="NOTIFY_VIDEO_RTSP_TEARDOWN_CONNECT_SUCCESS_INFO">Request video again...</string>
+	<string name="PAUSE_SUCCESS_REQUEST_VIDEO_AGAIN">Request video again...</string>
+	<string name="UNSUPPORTED_STREAM_FORMATE">Android software only support h.264 stream</string>
+	<string name="CONNECT_TIMEOUT">Connecting time out ,please confirm the network signal...</string>
+	<string name="NOTIFY_VIDEO_RTSP_DESCRIBE_CONNECT_FAILED_INFO">Connecting failed...</string>
+	<string name="NOTIFY_VIDEO_RTSP_SETUP_CONNECT_FAILED_INFO">Connecting failed...</string>
+	<string name="NOTIFY_VIDEO_RTSP_PLAY_CONNECT_FAILED_INFO">Connecting failed....</string>
+	<string name="NOTIFY_VIDEO_RTSP_TEARDOWN_CONNECT_FAILED_INFO">closing connecting failed....</string>
+	<string name="RTSPFORMATEERROR">RTSP is invalid...</string>
+	<string name="NOT_SUPPORT_ARM_CPU">Does not support this machine</string>
+	
+	<!-- 服务器返回非200 OK代码 -->
+	<string name="ZTENV_ERROR_DESCRIBE_RESPONSE_CODE">Return mistake connecting code from serve...</string>
+	<string name="ZTENV_ERROR_SETUP_SESSIONID_NULL">Connecting failed...</string>
+	<string name="CLICK_BUTTON_LATER">Please don’t click continually...</string>
+	<string name="NOTIFY_INCOMING_DIALOG">There is coming call, video stopped,please connecting again...</string>
+	<string name="ZTENV_ERROR_TIMEOUT">Network connecting time out, please connecting again..</string>
+	<!-- 用户名、密码、IP不能为空 -->
+	<string name="userNameCannotBeNull">user name cannot be null</string>
+	<string name="passwordCannotBeNull">password can not be null</string>
+	<string name="wpuipCannotBeNull">WPU IP can not be null</string>
+	
+	<string name="EnjoryNow">Enjory Now</string>
+	<string name="Cancel">Cancel</string>
+	<string name="Rename">Rename</string>
+	<string name="Property">Property</string>
+	<string name="Delete">Delete</string>
+	<string name="SDcardUnChecked">Sdcard UnChecked</string>
+	<string name="RecordFileUnChecked">Record UnChecked</string>
+	<string name="ImageFileUnChecked">Image UnChecked</string>
+	<string name="RenameFileFailed">Rename Failed</string>
+	<string name="RENAME_FILE_DUPLICATE">Rename Failed Of Duplicated FileName</string>
+	<string name="RecordManage">Record Manage</string>
+	<string name="ImageManage">Image Manage</string>
+	<string name="FileName">FileName:</string>
+	<string name="FilePath">FilePath:</string>
+	<string name="CreateTime">CreateTime:</string>
+	<string name="Sure">OK</string>
+	<string name="PrepareToScanMediaAndWait">Prepare to Scan Media,Please Wait for a minute!</string>
+	<string name="IsScanMedia">Is scaning Media,Please Wait for a Minute!</string>
+	<string name="MistakeNetwork">Mistake Network!</string>
+	<string name="InputCorrectKey">KeyPlease input a correct Key!</string>
+	<string name="TrafficsUse">Traffics Use</string>
+	
+	 <!-- 按钮显示：播放  截图 全屏 控制 录像 返回 -->
+    <string name="buttonExplain_Play">Play</string>	
+	<string name="buttonExplain_Snap">Snap</string>
+	<string name="buttonExplain_Fullscreensel">Full</string>
+	<string name="buttonExplain_OpenPTZ">PTZ</string>
+	<string name="buttonExplain_Record">Record</string>
+	<string name="buttonExplain_Pre">Pre</string>
+	<string name="buttonExplain_Next">Next</string>	
+	<string name="buttonExplain_Return">Back</string>	
+    
+    <string name="ERROR_OF_QUERY_PLATFORM_CONFIGURATION">Please ensure the Platform is configurationed</string>
+    <string name="NO_RECORD_OF_CURRENT_CAMERA">No Record,Please query other times</string>
+	
+	<!-- 对话框上显示信息 -->
+	<string name="loginWatingState">logging ,please wait...</string>
+	
+	<!-- 在设备界面的提示信息 -->
+	<string name="ClickToLoadMore">Click to Load More...</string>
+	<string name="currentCameraNum">Cur Camera</string>
+	<string name="totalCameraNum">Total</string>
+	<string name="currentPUNum">Cur PU</string>
+	<string name="totalPUNum">Total</string>
+	<string name="currentOfficeNum">Cur Office</string>
+	<string name="totalOfficeNum">Total</string>
+    <string name="currentAlarmExceptionNum">Current Alarm</string>
+    <string name="currentRecorderNum">Current Recorder</string>
+    <string name="pastAlarmExceptionNum">History Alarm</string>
+    <string name="totalRecorderNum">Total</string>
+    <string name="totalAlarmExceptionNum">Total</string>
+
+	<!-- 抓图时存储卡的提示信息 -->
+	<string name="CAN_NOT_SNAP_PICTURE">No video, capture unavailable...
+	</string>
+	<string name="STORAGESTATE_SNAP_SUCCESS">snap success..</string>
+	<string name="STORAGESTATE_FULL">storage full...</string>
+	<string name="STORAGESTATE_FILEPATHERROR">snap failed,make sure file path success...</string>
+	<string name="STORAGESTATE_WRITELOGERROR">write log to storage failed...</string>
+	<string name="STORAGESTATE_IOException">snap failed,make sure storage is useful...</string>
+	<string name="STORAGESTATE_MEDIA_MOUNTED">storage mounted...</string>
+	<string name="STORAGESTATE_MEDIA_MOUNTED_READ_ONLY">storage read only...</string>
+	<string name="STORAGESTATE_MEDIA_SHARED">storage shared via USB</string>
+	<string name="STORAGESTATE_MEDIA_BAD_REMOVAL">storage bad removal</string>
+	<string name="STORAGESTATE_MEDIA_UNMOUNTABLE">storage unmountable</string>
+	<string name="STORAGESTATE_MEDIA_NOFS">storage is using an unsupported file system
+	</string>
+	<string name="STORAGESTATE_MEDIA_CHECKING">storage is checking</string>
+	<string name="STORAGESTATE_MEDIA_UNMOUNTED">storage unmounted</string>
+	<string name="STORAGESTATE_MEDIA_REMOVED">storage has removed</string>
+	<string name="STORAGESTATE_CREATE_FOLDER_FAILED">create folder failed</string>
+
+	<!-- 版本更新 -->
+	<string name="update_title_update">Update</string>
+	<string name="update_url_or_network_mistake">Update Url is mistake or network unusable!</string>
+	<string name="update_request_update">Update now</string>
+	<string name="update_title_waiting">Downloading</string>
+	<string name="update_request_waiting">Please wait...</string>
+	<string name="update_btn_update">Update</string>
+	<string name="update_btn_not_update">Update Later</string>
+	<string name="update_fail_update_title">Update failed</string>
+	<string name="update_fail_update_msg">Update failed ,please update manually</string>
+	<string name="update_latest_version">Latest version, no need update</string>
+	<string name="update_fail_no_apk">Update failed ,Can not find download software</string>
+	<string name="update_set_sure">Confirm</string>
+	<string name="Update_Now">Updating,wait for a minute!</string>
+	
+	<!-- 录像信息 -->
+	<string name="CAN_NOT_RECORD">No vedio,can\'t record...</string>
+	<string name="recordStoreAddress">Record Path</string>
+	<string name="inputRecordStoreAddress">Please input the record storage address</string>
+	<string name="record_successfully">Record successfully</string>
+	<string name="storage_is_full">The sdcard has no capacity</string>
+	<string name="unuseful_sdcard">No useful sdcard</string>
+	<string name="recorderQuery">Recorder Query</string>
+	<string name="warningQuery">Warning Query</string>
+	<string name="mapQuery">Map</string>
+	<string name="camera_item_map_text">Map</string>
+	<string name="camera_item_detail">Detail</string>
+	<string name="pu_item_map_text">Map</string>
+	<string name="pu_item_detail">Detail</string>
+	<string name="office_item_map_text">Map</string>
+	<string name="office_item_detail">Detail</string>
+	<string name="pull_to_refresh">Pull to Refresh</string>
+	<string name="last_update">Last Update</string>
+	<string name="remember_pwd">Rember PWD</string>
+	<string name="office">Office</string>
+	<string name="camera">Camera</string>
+	<string name="pu">PU</string>
+	<string name="hint_recorder_begin_time">The format of begin time:2012-03-04-19-05</string>
+	<string name="hint_recorder_end_time">he format of end time:1985-03-04-09-55</string>
+	<string name="realAlarm">Real Alarm</string>
+	<string name="favorite">Favorite</string>
+	<string name="tab_favorite">Favorite</string>
+	<string name="item_favorite_add">Add Favorite</string>
+	<string name="item_favorite_del">Delete Favorite</string>
+	<string name="map">Map</string>
+	<string name="item_map">Browser Map</string>
+	<string name="all_time_recorder">All Recorder</string>
+	<string name="recorder_search_back">Back</string>
+	<string name="recorder_search">Record Query</string>
+	<string name="end_time">End Time:</string>
+	<string name="begin_time">Begin Time:</string>
+	
+	<string name="clickToLoadAllFavorite">Refresh To Load All Cameras</string>
+    <string name="addFavoriteSuccess">Add Camera To Favorite Success</string>
+    <string name="DelFavoriteSuccess">Del Camera From Favorite Success</string>
+	<string name="AddToFavoriteWating">Is Adding Camera to Favorite,Please Wait</string>
+    <string name="DelFromFavoriteWating">Is Deling Camera from Favorite,Please Wait</string>
+    
+	<!-- devices detail information -->	<string name="camera_detail_name">Name</string>
+	<string name="camera_detail_id">ID</string>
+	<string name="camera_detail_rtsp">RTSP</string>
+	<string name="camera_detail_coordinate">Coordinate</string>
+	<string name="camera_detail_state">State</string>
+	<string name="device_state_online">Online</string>
+	<string name="device_state_offline">Offline</string>
+	<string name="device_detail_state">State</string>
+	<string name="pu_detail_name">Name</string>
+	<string name="pu_detail_id">ID</string>
+	<string name="pu_detail_coordinate">Coordinate</string>
+	<string name="office_detail_name">Name</string>
+	<string name="office_detail_id">ID</string>
+	<string name="office_detail_coordinate">Coordinate</string>
+	<string name="office_detail_sub_camera_num">Sub Camera Num</string>
+	<string name="office_detail_sub_onlinecamera_num">Sub Online Camera Num</string>
+	<string name="office_detail_sub_office_num">Sub Office Num</string>
+	<string name="office_detail_sub_pu_num">Sub PU Num</string>
+	<string name="office_detail_sub_onlinepu_num">Sub Online PU Num</string>
+	<string name="rebootpu">Reboot PU</string>
+	<string name="renameOffice">Rename Office</string>
+    <string name="state_online">State:Online</string>
+    <string name="state_offline">State:Offline</string>
+    <string name="device_id">Device ID:</string>
+    <string name="upper_office">Office:</string>
+    
+    <!-- 异常、告警级别    设备代码 -->
+    <!-- 告警级别 -->
+    <string name="ALARM_LOW">LOW</string>
+    <string name="ALARM_MIDDLE">Middle</string>
+    <string name="ALARM_HIGH">High</string>
+    <string name="ALARM_UNKNOWN_LEVEL">Unkonw</string>
+    <!-- 告警是否消除 -->
+    <string name="ALARM_AFFIRMED">Alarm Affirmed</string>
+    <string name="ALARM_UN_AFFIRMED">Alarm unAffirmed</string>
+    <string name="ALARM_UNKNOWN_AFFIRMED">Alarm unkonwn</string>
+    <string name="NO_CAMERA_IN_FAVORITE">No camera in Favorite</string>
+    <!-- session过期错误号及用户名错误错误号 -->
+    <string name="ERROR_SESSION_OUT">Session Timeout</string>
+    <string name="ERROR_USERNAME_WRONG">UserName is wrong</string>
+    <string name="NO_CURRENT_ALARM_OF_SOME_CAMERA">No current Alarm of this camera </string>
+
+    <!-- DEVICE_KIND -->
+    <string name="OFFICE">Office</string>
+    <string name="PLATFORM_DEVICE">Platform device</string>
+    <string name="ENCODER">Encoder</string>
+    <string name="DECODER">Decoder</string>
+    <string name="CAMERA">Camera</string>
+    <string name="ALARM_DEVICE">Alarm Device</string>
+    <string name="DO_DEVICE">DO Device</string>
+    <string name="TV_WALL">TV Wall</string>
+    <string name="AI_DEVICE">AI Device</string>
+    <string name="VIRTUAL_ACCESS">Virtual Access</string>
+    <string name="DCI_DEVICE">DCI Device</string>
+    <string name="UNKNOWN_DEVICE">Unknown Device</string>
+
+    <!--
+	 * @brief DEVICE_TYPE 设备类型，定义了中心服务器和客户端的类型
+	 * 
+	 *        服务器的类型可以是多种服务类型的组合，0x0003 = CENTER_SERVER | CONNECT_SERVER
+	 *        表明该服务器集接入和管理服务器与一体，也就是在该设备上同时运行了中心服务器和接 入服务器的模块。客户端类型不可重叠
+    -->
+    <string name="UNKNOWN_TYPE">Unkown Type</string>
+    <string name="CENTER_SERVER">Center Server</string>
+    <string name="CONNECT_SERVER">Connect Server</string>
+    <string name="DISPATCH_SERVER">Dispatch Server</string>
+    <string name="STORE_SERVER">Store Server</string>
+    <string name="MONITOR_SERVER">Business Server</string>
+    <string name="DATABASE_SERVER">Database Server</string>
+    <string name="WEB_SERVER">Web Server</string>
+    <string name="AAA_SERVER">AAA Server</string>
+    <string name="TV_SERVER">TV Server</string>
+    <string name="CONFIRM_STORE_SERVER">Confirm Store Server</string>
+    <string name="PIC_SERVICE_SERVER">Pitcure Service Server</string>
+    <string name="VAU_SERVER">VAU Server</string>
+    <string name="PICC_SERVICE_SERVER">Picc Service Server</string>
+    <string name="MANAGER_CLIENT">Manager Client</string>
+    <string name="VIDEO_CLIENT">Video Client</string>
+    <string name="WEB_CLIENT">Web Client</string>
+    <string name="PHYSICAL_CENTER">Physical Center</string>
+    <string name="STORE_BACK_SERVER">Store Back Server</string>
+    <string name="DISPATCH_BACK_SERVER">Dispatch Back Server</string>
+    <string name="PUPROXY_SERVER">PU Proxy Server</string>
+    <string name="API_COMMUNICATION_SERVER">>API Communication Server</string>
+    <string name="VAU_BACK_SERVER">VAU Back Server</string>
+    <string name="CONNECT_BACK_SERVER">Connect Back Server</string>
+    <string name="TRANSCODE_SERVER">Transcode Server</string>
+    <string name="TRANSCODE_BACK_SERVER">Transcode Back Server</string>
+    <string name="SA_SERVER">SA Server</string>
+    <!-- 0x2000系列为编码器 -->
+    <string name="DEVICE_3000">3000 Device</string>
+    <string name="DEVICE_4000">4000 Device</string>
+    <string name="DEVICE_5000">5000 Device</string>
+    <string name="DEVICE_STD">Standard Device</string>
+    <string name="DEVICE_STD5000">Standard 5000 Device</string>
+    <string name="DEVICE_8000">8000 Device(8474)</string>
+    <string name="DEVICE_8000Plus">8000+ Device(8493)</string>
+    <string name="DEVICE_8000SDK">8000 SDK Device(8498)</string>
+    <string name="DEVICE_ONVIF">onvif Device(8533)</string>
+
+    <!-- 0x3000系列为解码器 -->
+    <string name="DECODER_4000">ZTE 4000 Decoder</string>
+    <string name="DECODER_5000">HK C5000 Decoder</string>
+    <string name="DECODER_6000">HK C6000 Decoder(12291)</string>
+    <string name="DECODER_STD">Standard Decoder</string>
+
+    <!-- 0x4000系列为报警设备 -->
+    <string name="ANNNUNCIATE_RECVER">Annnunciate Recver</string>
+    <string name="ANNNUNCIATE_WARNER">Annnunciate Warner</string>
+    <string name="CLERK">Clerk</string>
+
+    <!-- ALARM_TYPE  前端编码器告警1-10 -->
+    <string name="ALARM_TYPE_DI">DI Alarm</string>
+    <string name="ALARM_DISK_FULL">Disk Full Alarm</string>
+    <string name="ALARM_NO_SIGNAL">No Signal Alarm</string>
+    <string name="ALARM_TYPE_MOVE_DECTION">Move Detection Alarm</string>
+    <string name="ALARM_DISK_NOT_FORMAT">Disk not Format Alarm</string>
+    <string name="ALARM_DISD_RW_ERROR">Disk RW Error Alarm</string>
+    <string name="ALARM_SHIELD">Shield Alarm</string>
+    <string name="ALARM_VS_UPGRADE">VS Upgrade Alarm</string>
+    <string name="ALARM_ACCESS_VIOLATE">Access Violate Alarm</string>
+    <string name="ALARM_TYPE_AI">AI Alarm</string>
+
+    <!-- 智能告警 11-40 -->
+    <string name="ALARM_OBJECT_REMOVED">Object Removed Alarm</string>
+    <string name="ALARM_OBJECT_LEFT">Object Left Alarm</string>
+    <string name="ALARM_NO_PARKING">No Parking Alarm</string>
+    <string name="ALARM_PERIMETER">Perimeter Alarm</string>
+    <string name="ALARM_ABNORMAL_VEL">Abnormal Speed Alarm</string>
+    <string name="ALARM_CONVERSE">Converse Alarm</string>
+    <string name="ALARM_TRIPWIRE">Trip wire Alarm</string>
+    <string name="ALARM_LOITER">Loiter Alarm</string>
+    <string name="ALARM_SLIP_UP">Slip Up Alarm</string>
+    <string name="ALARM_FIRE">Fire Alarm</string>
+    <string name="ALARM_SMOKE">Smoke Alarm</string>
+    <string name="ALARM_HELP">Help Alarm</string>
+    <string name="ALARM_ASSEMBLE">Assemble Alarm</string>
+
+    <!-- add by lhf on 2012.3.14 新加部分智能告警类型 -->
+    <string name="ALARM_FIGHT">Fight Alarm</string>
+    <string name="ALARM_LEAVEREGION">Leave Region Alarm</string>
+    <string name="ALARM_ENVIRCHANGE">Enviroment Change Alarm</string>
+    <string name="ALARM_LEFTTHROUGHLINE">Left Through Line Alarm</string>
+    <string name="ALARM_RIGHTTHROUGHLINE">Right Through Line Alarm</string>
+    <string name="ALARM_OBJECT_MOVE">Object Move Alarm</string>
+    <string name="ALARM_OBJECT_BLOCK">Object Block Alarm</string>
+    <string name="ALARM_OBJECT_STRANDED">Object Stranded Alarm</string>
+    <!--
+	 * < 围栏入侵
+	 * 用户设定一道或多道任意形状的虚拟围栏，每一道虚拟围栏的长度、高度和厚度可以独立设置，此外还可以指定攀越（或穿越）某个虚拟围栏的非法方向
+	 * （两个单向或者双向）。当入侵者在非法方向上攀越（或穿越）围栏时将自动触发报警。
+	 * 这种检测模式非常适合用于各种周界和围栏的入侵防范，例如私人住宅区（防止进入）、监狱（防止逃出）、边境（防止任意方向穿越）等应用场合
+    -->
+    <string name="ALARM_FENCE_DETECTION">Fence Detection Alarm</string>
+
+    <!-- 平台服务器告警 40- -->
+    <string name="ALARM_THREAD_NO_RESPONSE">Server No Response Alarm</string>
+    <string name="ALARM_DATABASE_ABNORMAL">Database Abnormal Alarm</string>
+    <string name="ALARM_STORE_NO_DATA">store No Data Alarm</string>
+    <string name="ALARM_VIDEO_REQUEST">Video Request Alarm</string>
+    <string name="ALARM_STORE">Store Server Alarm</string>
+    <string name="ALARM_DISPATCH">Dispatch Server Alarm</string>
+    <string name="ALARM_CMDRUN_ABNORMAL">CMD Run Abnormal Alarm</string>
+    <string name="ALARM_CMDPOOL_FULL">Center Pool Full Alarm</string>
+    <string name="ALARM_STORE_WRITE">Store Server Disk Write Alarm</string>
+    <string name="ALARM_LOSE_RATE">Lose Packet Rate Alarm</string>
+    <string name="ALARM_DISK_THRESHOLD">Disk Threshold Alarm</string>
+
+    <!-- 车载设备告警80-95 -->
+    <string name="ALARM_VS_OVERSPEED">Over Speed Alarm</string>
+    <string name="ALARM_VS_NOGPSSIGNAL">No GPS Signal Alarm</string>
+    <string name="ALARM_VS_OVERRANGE">Over Range Alarm</string>
+    <string name="NETWORK_INTERRUPT">Network Interrupt</string>
+    <string name="CPU_TOO_HIGH">CPU Too High</string>
+    <string name="MEMORY_USAGE_TOO_HIGH">Memory Usage Too High</string>
+    <string name="UPLINK_NETWORK_TRAFFIC_TOO_HIGH">Uplink Network Traffice Too High</string>
+    <string name="DOWNLINK_NETWORK_TRAFFIC_TOO_HIGH">Downlink Network Traffice Too High</string>
+
+    <!-- ALARM_LINKAGE_TYPE -->
+    <string name="LINKAGE_GOTO_POSITION">Goto the Linkage postion</string>
+    <string name="LINKAGE_RECORD">Record Alarm Linkage</string>
+    <string name="LINKAGE_DO">DO Alarm Linkage</string>
+	
+	<!-- 刷新Listview -->
+	<string name="pull_to_refresh_pull_label">Click to Load...</string>
+	<string name="pull_to_refresh_release_label">Release to Load...</string>
+	<string name="pull_to_refresh_refreshing_label">Click to Load...</string>
+	<string name="pull_to_refresh_tap_label">Click to Load...</string>
+	<string name="refresh_updated_tip">Click to load more...</string>
+	<string name="recorderSize">recorder size:</string>
+	<string name="recorderQueryList">The Records</string>
+
+	<!-- webservices error -->
+	<string name="ERROR_USERNAME_OR_PASSWORD_IS_NULL">Username or Password is blank</string>
+	<string name="ERROR_FAILED_CONNECT_TO_CMS">Failed to connect CMS</string>
+	<string name="ERROR_DEFAULT_ERRORCODE">The default wpu error</string>
+	<string name="ERROR_GET_CAMERA_SESSION_TIMEOUT">Get camera session invalid</string>
+	<string name="ERROR_GET_PU_SESSION_TIMEOUT">Get pu session invalid</string>
+	<string name="ERROR_GET_OFFICE_SESSION_TIMEOUT">Get office session invalid</string>
+	<string name="ERROR_GET_CAMERA_USERNAME_WRONG">The wrong username of camera</string>
+	<string name="ERROR_GET_PU_USERNAME_WRONG">The wrong username of pu</string>
+	<string name="ERROR_GET_OFFICE_USERNAME_WRONG">The wrong username of office</string>
+	<string name="ERROR_GET_RECORDER_SESSION_TIMEOUT">Get recorder session invalid</string>
+	<string name="ERROR_GET_RECORDER_USERNAME_WRONG">The wrong username of recorder</string>
+	<string name="START_TIME_EMPTY">The start time is empty</string>
+	<string name="TERMINAL_TIME_EMPTY">The end time is empty</string>
+	<string name="FORMAT_OF_START_TIME_WRONG">The start time format is wrong</string>
+	<string name="FORMAT_OF_TERMINAL_TIME_WRONG">The end time format is wrong</string>
+	<string name="TERMINAL_TIME_EXIST_BEFORE_START_TIME">The begin time exists end time</string>
+	<string name="AlarmQueryTimeMustBetweenThisMonth">Do not support the cross month query</string>
+    <string name="AlarmQueryTimeMustBetweenThisYear">Do not support the cross year query不支持跨年查询</string>
+	
+	<!-- webservices连接时，登录，获取设备等IO异常 -->
+	<string name="ERROR_WEBSERVICES_LOGIN_XmlPullParserException">XML Parser Exception with Login</string>
+	<string name="ERROR_WEBSERVICES_LOGIN_IOException">Network Exception with login</string>
+	<string name="ERROR_WEBSERVICES_LOGIN_Exception">Unkonw Exception with login</string>
+	<string name="ERROR_WEBSERVICES_LOGOUT_XmlPullParserException">XML Parser Exception with Logout</string>
+	<string name="ERROR_WEBSERVICES_LOGOUT_IOException">Network Exception with logout</string>
+	<string name="ERROR_WEBSERVICES_LOGOUT_Exception">Unkonw Exception with logout</string>
+	<string name="ERROR_WEBSERVICES_getCameraList_XmlPullParserException">XML Parser Exception with Get Camera</string>
+	<string name="ERROR_WEBSERVICES_getCameraList_IOException">Network Exception with Get Camera</string>
+	<string name="ERROR_WEBSERVICES_getCameraList_Exception">Unkonw Exception with Get Cameara</string>
+	<string name="ERROR_WEBSERVICES_getPUList_XmlPullParserException">XML Parser Exception with Get PU</string>
+	<string name="ERROR_WEBSERVICES_getPUList_IOException">Network Exception with Get PU</string>
+	<string name="ERROR_WEBSERVICES_getPUList_Exception">Unkonw Exception with Get PU</string>
+	<string name="ERROR_WEBSERVICES_getOfficeList_XmlPullParserException">XML Parser Exception with Get Officen</string>
+	<string name="ERROR_WEBSERVICES_getOfficeList_IOException">Network Exception with Get Office</string>
+	<string name="ERROR_WEBSERVICES_getOfficeList_Exception">Unkonw Exception with Get Office</string>
+	<string name="ERROR_WEBSERVICES_getCurAlarmList_XmlPullParserException">Xml Parser Exception with Get Alarm</string>
+    <string name="ERROR_WEBSERVICES_getCurAlarmList_IOException">Network Exception with Get Alarm</string>
+    <string name="ERROR_WEBSERVICES_getCurAlarmList_Exception">Unkonw Exception with Get Alarm</string>
+	<string name="ERROR_WEBSERVICES_SENDHEART_XmlPullParserException">XML Parser Exception with heartbeat</string>
+	<string name="ERROR_WEBSERVICES_SENDHEART_IOException">Network Exception with heart beat</string>
+	<string name="ERROR_WEBSERVICES_SENDHEART_Exception">Unkonw Exception with heart beat</string>
+	<string name="ERROR_WEBSERVICES_getRecorderList_XmlPullParserException">XML Parser Exception with Get Recorder</string>
+	<string name="ERROR_WEBSERVICES_getRecorderList_IOException">Network Exception with Get Recorder</string>
+	<string name="ERROR_WEBSERVICES_getRecorderList_Exception">Unkonw Exception with Get Recorder</string>
+	<string name="ERROR_WEBSERVICES_getCurExceptionList_XmlPullParserException">XML Parser Exception with Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getCurExceptionList_IOException">Network Exception with  Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getCurExceptionList_Exception">Unkonw Exception with  Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getCurOneAlarmList_XmlPullParserException">XML Parser Exception with  Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getCurOneAlarmList_IOException">Network Exception with  Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getCurOneAlarmList_Exception">Unkonw Exception with  Get Current Alarm</string>
+	<string name="ERROR_WEBSERVICES_getFavoriteList_XmlPullParserException">XML Parser Exception with Get Camera From Favorite</string>
+	<string name="ERROR_WEBSERVICES_getFavoriteList_IOException">Network Exception with Get Camera From Favorite</string>
+	<string name="ERROR_WEBSERVICES_getFavoriteList_Exception">Unkonw Exception with Get Cameara From Favorite</string>
+	<string name="ERROR_WEBSERVICES_addOrDelFavoriteList_XmlPullParserException">XML Parser Exception with Add/Del Camera From Favorite</string>
+	<string name="ERROR_WEBSERVICES_addOrDelFavoriteList_IOException">Network Exception with Add/Del Camera From Favorite</string>
+	<string name="ERROR_WEBSERVICES_addOrDelFavoriteList_Exception">Unkonw Exception with Add/Del Camera From Favorite</string>
+
+	<!-- ListWidget footer view 上显示的信息 -->
+	<string name="DATA_LOAD_COMPLETED">Load Completed</string>
+	<string name="IS_ROOT_OFFICE">Is The Root Office</string>
+	<string name="CURRENT_CAMERA_NUM_IS_ZERO">Current Camera Is Zero</string>
+	<string name="CURRENT_ALARM_NUM_IS_ZERO">Current Alarm is Zero</string>
+	<string name="CURRENT_DEVICE_NUM_IS_ZERO">Current Device is Zero</string>
+	<string name="PAST_ALARM_NUM_IS_ZERO">Past History Alarm is Zero</string>
+	<string name="CURRENT_RECORDER_NUM_IS_ZERO">Current Recorder is Zero</string>
+	<string name="DATA_HAS_LOAD_COMPLETED">Data Has Load Completed</string>
+	<string name="INPUT_YOUR_SERACH_TEXT">Please Input Search Text</string>
+	<string name="IS_LAST_VIDEO">Is the Last Video</string>
+	<string name="IS_FIRST_VIDEO">Is the First Video</string>
+
+	<string name="IS_LOADING_PLEASE_WAIT">Data Is Loading,Please Waiting...</string>
+	<string name="ONLINE_CAMERA">Online Camera:</string>
+	<string name="TOTAL_CAMERA">Total Camera:</string>
+	<string name="RECORDER_ERROR_INFO">Recorder Error Info:</string>
+
+	<!-- cms error -->
+	<string name="REQUEST_VIDEO_SEND_TIMEOUT">Request Sending Video Overtime</string>
+	<string name="REQUEST_VIDEO_ROUTER_FAIL">Fail to Request Video Rooting</string>
+	<string name="REQUEST_VIDEO_ROUTER_ERROR">Error in Retrieving Rooting in Server</string>
+	<string name="NO_AVALIABLE_VIDEO_ROUTER">No Available Video Rooting</string>
+	<string name="VIDEO_DATA_INTERRUPTED">Video Interrupted</string>
+	<string name="RECONNECTING_DISPATCH_SERVER">ReConnecting to Server</string>
+	<string name="MEDIA_SESSION_INTERRUPT">Media Session Interrupt</string>
+	<string name="UNSUPPORTED_ENCODER_TYPE">Unsupported Encoder Type</string>
+	<string name="UNSUPPORTED_VIDEO_LINK_MODEL">Unsupported Video Transmission Mode</string>
+	<string name="PU_NOT_REGISTER">Pu not register</string>
+	<string name="ERROR_NOT_FOUND_LONG_CONNECT">Connection Not Found</string>
+	<string name="ERROR_CONNECT_FAILURE_BEGIN">Error in Starting to Build Connection"</string>
+	<string name="ERROR_CONNECT_FAILURE_IO_STREAM">Fail to Connect Due to Failure to Start
+		Asynchronous Reading and Writing Operations in I/O Streams
+	</string>
+	<string name="ERROR_NOW_LONG_CONNECT">Building Long Connection</string>
+	<string name="CONNECT_SERVER_FAIL">Fail to Connect to Server</string>
+	<string name="REQUEST_TIME_OUT">Request Overtime</string>
+	<string name="ERROR_SERVER_INTERRUPT">Connection to Server
+		Interrupted
+	</string>
+	<string name="ERROR_CLIENT_LOGIN">Fail to Login after ReConnection</string>
+	<string name="ERROR_RELOGIN_TIMEOUT">Login Overtime after ReConnection</string>
+	<string name="ERROR_SERVER_NOT_CONNECT">Server not connect</string>
+	<string name="ERROR_UNREACHED">Destination UnReached</string>
+	<string name="ERROR_ACCESS_DATABASE">Fail to Access Database</string>
+	<string name="ERROR_NO_RECORD">Find No Record</string>
+	<string name="ERROR_SERVER_LOGINED">Server Already Login</string>
+	<string name="ERROR_USER_SUSPEND">The User Has Been Deactivated
+	</string>
+	<string name="ERROR_NO_AUTHORITY">No Right to Operate</string>
+	<string name="ERROR_NO_USER">The User Does Not Exist</string>
+	<string name="ERROR_INVALID_PWD">Wrong Password</string>
+	<string name="ERROR_MAX_LOGINED">Reaching Upper Limit of
+		Simultaneous Online
+	</string>
+	<string name="ERROR_SESSION_EXIST">Repeated Session ID</string>
+	<string name="ERROR_SESSION_NULL">Null Session ID</string>
+	<string name="ERROR_USERINFO_NULL">No Available User Information</string>
+	<string name="ERROR_USER_LOGINING">The User Already Login in Client</string>
+	<string name="ERROR_USER_NAME_REPEATED">Repeated User Name</string>
+	<string name="ERROR_MAX_USER_COUNT">Reach Upper Limit of User Count</string>
+	<string name="ERROR_GROUP_NAME_REPEQTED">Repeated User Group Name</string>
+	<string name="ERROR_BUFFER_NOT_ENOUGH">Buffer Not Enough</string>
+	<string name="ERROR_SESSION_NOT_INIT">Session Not Initialized</string>
+	<string name="ERROR_SERVER_FAULT">Error in Server</string>
+	<string name="ERROR_COMMAND_BUFFER_FULL">Server Command Buffer is Full</string>
+	<string name="ERROR_OUT_OF_MEMORY">Out of Memory</string>
+	<string name="ERROR_SERVER_NOT_SUPPORT">message not support</string>
+	<string name="ERROR_ALARM_CONFIRMED">Alarm confirmed</string>
+	<string name="ERROR_DEVICE_NOT_FOUND">Device not found</string>
+	<string name="ERROR_DEV_STATE_UNKNOWN">Device state unknown</string>
+	<string name="ERROR_SESSION_TIMEOUT">Overtime Session in Server</string>
+	<string name="REQUEST_VIDEO_HEADER_TIMEOUT">Request Camera Video Overtime</string>
+	<string name="ERROR_MAX_GROUP_LOGIN">Reach Upper Limit of Administrator User Count
+	</string>
+	<string name="ERROR_NULL_POINTER">Null Pointer</string>
+	<string name="ERROR_INVALID_ARGUMENT">Invalid Parameter</string>
+	<string name="ERROR_PROTOCOL_PARSE">Error in Parsing Protocol</string>
+	<string name="ERROR_PU_OFFLINE">Device Offline</string>
+	<string name="ERROR_PU_NOT_SUPPORT_PROTOCOL">Not Supported by PU</string>
+	<string name="RET_FAILED">Operate Unsuccessfully</string>
+	<string name="ERROR_CLIENT_FAULT">Client Not Authorized</string>
+	<string name="ERROR_ENTERPRISE_PREFIX_REPEATED">Repeated Administrator Prefix</string>
+	<string name="ERROR_ENTERPRISE_NAME_REPEATED">Repeated Administrator Name </string>
+	<string name="ERROR_ENTERPRISE_ADMIN_EXIST">The Administrator Has A Manager Already</string>
+	<string name="ERROR_HAVE_CHILD_OFFICE">Fail To Delete Office Which Has Child Office
+	</string>
+	<string name="ERROR_OFFICE_NAME_REPEATED">Repeated Office Name</string>
+	<string name="ERROR_KEY_CONFLICT">Specified Data or Related Data Exist in Database	</string>
+	<string name="ERROR_NEED_MAC_BOUND">User Account Should Be Bounded with MAC Address	</string>
+	<string name="ERROR_NEED_USBKEY_BOUND">User Account Should Be Bounded with USB Key	</string>
+	<string name="ERROR_MAC_VALIDATE">Fail to Pass Authentication</string>
+	<string name="ERROR_USBKEY_VALIDATE">Fail to Pass Authentication</string>
+	<string name="ERROR_MAC_USBKEY_VALIDATE">Fail to Pass Authentication</string>
+	<string name="ERROR_ENCODER_PORT_REPEATED">Repeated Encoder Name or Channels</string>
+	<string name="ERROR_USBKEY_HAVE_BOUND">USB Key Provided by Client Has Been Bounded</string>
+	<string name="ERROR_ACCESS_UKEY">Error in Accessing USB Key	</string>
+	<string name="ERROR_NO_UKEY">USB Key Not Found</string>
+	<string name="ERROR_NO_USERLOCKCOUNT">Allowable Times before Being Locked Not Been Initialized in Database</string>
+	<string name="ERROR_NO_USERLOCKTIME">Locking Time Not Been Initialized in Database</string>
+	<string name="ERROR_USERLOCK">The User Has Been Locked</string>
+	<string name="ERROR_MACLOCK">The User IP Has Been Locked</string>
+	<string name="ERROR_USER_HAVE_GROUP">User Have Group</string>
+	<string name="ERROR_DEVICE_STOPPED">The Device Has Been Deactivated</string>
+	<string name="ERROR_SERVER_INUSE">server using,can not be delete</string>
+	<string name="ERROR_REG_SERVER_NOT_MATCH">register server not match</string>
+	<string name="DVR_BUSY">PU is Busy, Please Try Later</string>
+	<string name="ERROR_PROVINCE_NAME_EXIST">Province Name Already Exist</string>
+	<string name="ERROR_PROVINCE_FULL">Province Count Reach Maximum 100</string>
+	<string name="ERROR_PROVINCE_HAVE_CITY">Fail To Delete Province Which Have Cites</string>
+	<string name="ERROR_PROVINCE_HAVE_OFFICE">Fail To Delete Province Which Have Offices</string>
+	<string name="ERROR_CITY_NAME_EXIST">City Name Already Exist</string>
+	<string name="ERROR_CITY_FULL">City Count Reach Maximum 100</string>
+	<string name="ERROR_CITY_HAVE_OFFICE">Fail To Delete City Which Have Offices</string>
+	<string name="ERROR_5000PU_IP_EXIST">5000 SDK PU IP Exist</string>
+	<string name="ERROR_DATABASE_IS_EXIST">Database has Existed</string>
+	<string name="ERROR_BUSINESS_NUMBER_REPEATED">Bussiness number repeated</string>
+	<string name="ERROR_SDKPU_CANNOTUSE">5000SDK device can not use</string>
+	<string name="ERROR_DATABASE_CMS_EXIST">CMS has Existed</string>
+	<string name="ERROR_OLDVERSION_CANNOT_USED">Client Version is too old</string>
+	<string name="PU_AUDIO_CHANNEL_USED">Pu audio channels have been occupied</string>
+	<string name="ERROR_DECODER_OFFLINE">Decoder offline</string>
+	<string name="ERROR_NO_MANUAL_CRUISE_RECORD">not find manual camera cruise task</string>
+	<string name="ERROR_NO_STORE_TYPE">camera store is not record</string>
+	<string name="ERROR_MAX_CAMERA_COUNT">create camear max count</string>
+	<string name="ERROR_NAME_REPEATED">name repeat</string>
+	<string name="ERROR_CHILDOFFICE_OVERTAKE_PARENT">child office privilege overtake the parent</string>
+	<string name="NO_AUTHORITY_TO_ATTEND_MEETING">user has no authority to attend meeting</string>
+	<string name="ERROR_STORE_NUM_LIMIT_PRE">Store Camera Number Alarm</string>
+	<string name="ERROR_STORE_NUM_LIMIT">Store is Full,Can not Add Camera</string>
+	<string name="ERROR_STORE_SPACE_LIMIT_PRE">Store Space Alarm</string>
+	<string name="ERROR_STORE_SPACE_LIMIT">Store Is No Space,Can not Add Camera</string>
+	<string name="ERROR_OVER_DOWNLOAD_DURATION">Over Download Duration</string>
+	<string name="PU_REQUEST_FAULT">PU Request Error</string>
+	<string name="ERROR_PUTYPE_MAX_CAMERA_COUNT">Putype has max camera number,fail to add camera</string>
+	<string name="MEETINGROOM_IN_USE" code="-536860383">Meeting room is in use,can not edit</string>
+	<string name="ERROR_VIDEO_RESOURCE_LIMITED">video resource limited</string>
+	<string name="ERROR_USER_CANNOT_CHANGE_OFFICE">User can not Change Office</string>
+	<string name="ERROR_MAX_FACTORY_DEVICE_LIMITED">factory no authoraze or max factory device num</string>
+	<string name="PU_LOGIN_FAIL">PU Login Error</string>
+	<string name="ERROR_SERVER_NOT_MATCH">Error Server ID not exits or The type of Server is not match</string>
+	<string name="ERROR_TRANSCODE_TEMPLET_EXIST">TransCode Config Has Existed</string>
+	<string name="ERROR_CSG_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_MDU_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_STORE_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_TVS_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_VAU_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_TRANSCODE_LIMIT">The Server Is Limited, Please Change Others</string>
+	<string name="ERROR_DISPATCH_OFFLINE">The Dispatch Server Is Offline</string>
+	<string name="ERROR_STORE_OFFLINE">The Store Server Is Offline</string>
+	<string name="ERROR_ADC_CUSTOM_NOT_EXIST">The Custom Is Not ADC User</string>
+	
+		<!-- about baidu map -->
+    <string name="IS_SEARCHING_PLEASE_WAIT">Please wait while search cameras!</string>
+    <string name="NO_SEARCHED_CAMERA">No camera, please change keyword!</string>
+    <string name="CAMERA_OFFLINE">The camera is offline currently, please select other cameras!</string>
+    <string name="TOO_MANY_CAMERAS_IN_CLUSTER"> There are more than 10 cameras in it, please zoom in further!</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black">#000000</color>
+    <color name="gray">#9d9d9d</color>
+    <color name="title_bg">#2f2f2f</color>
+    <color name="login_bg">#51b6d4</color>
+    <color name="bottom_bg">#424242</color>
+    <color name="bottom_sel">#ff0000</color>
+    <color name="attence_gray">#ECEBF2</color>
+    <color name="attence_title">#f3ab32</color>
+    <color name="attence_line">#c8c7cc</color>
+    <color name="red">#BB0F1B</color>
+    <color name="photo_font">#007aff</color>
+    <color name="transparent">#00000000</color>    
+    <color name="bottom_bg_line">#c8c8c8</color>
+</resources>

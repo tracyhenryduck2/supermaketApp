@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+    <!-- 视频播放界面的提示信息 -->
+    <string name="ZTENV_ERROR_RTSP_URL">链接地址错误...</string>
+    <string name="blank"></string>
+    <string name="receivingData">正在接受数据，请稍候...</string>
+    <string name="ZTENV_ERROR_RTSP_SOCKET_SETUP">无法连接到远程地址，请确保连接有...效</string>
+    <string name="ZTENV_RECEIVING_NET_DATA">正在初始化网络，请稍候...</string>
+    <string name="NOTIFY_VIDEO_RTSP_DESCRIBE_CONNECT_SUCCESS_INFO">建立连接成功...</string>
+    <string name="ZTENV_ERROR_IOEXCEPTION">请重新请求视频...</string>
+    <string name="ZTENV_ERROR_INITIAL_DATASOCKET">初始化网络出错...</string>
+    <string name="NOTIFY_VIDEO_RTSP_PLAY_CONNECT_SUCCESS_INFO">会话完成...</string>
+    <string name="NOTIFY_VIDEO_RTSP_TEARDOWN_CONNECT_SUCCESS_INFO">请重新请求视频...</string>
+    <string name="PAUSE_SUCCESS_REQUEST_VIDEO_AGAIN">请重新请求视频...</string>
+    <string name="UNSUPPORTED_STREAM_FORMATE">客户端仅支持H264码流</string>
+    <string name="CONNECT_TIMEOUT">网络连接超时,请确保网络信号...</string>
+    <string name="NOTIFY_VIDEO_RTSP_DESCRIBE_CONNECT_FAILED_INFO">会话失败...</string>
+    <string name="NOTIFY_VIDEO_RTSP_SETUP_CONNECT_FAILED_INFO">会话失败...</string>
+    <string name="NOTIFY_VIDEO_RTSP_PLAY_CONNECT_FAILED_INFO">会话失败...</string>
+    <string name="NOTIFY_VIDEO_RTSP_TEARDOWN_CONNECT_FAILED_INFO">关闭会话失败</string>
+    <string name="RTSPFORMATEERROR">视频链接地址无效...</string>
+    <string name="NOT_SUPPORT_ARM_CPU">抱歉暂不支持此机型</string>
+    
+    <!-- 服务器返回非200 OK代码 -->
+    <string name="ZTENV_ERROR_DESCRIBE_RESPONSE_CODE">服务器返回错误会话代码...</string>
+    <string name="ZTENV_ERROR_SETUP_SESSIONID_NULL">会话失败...</string>
+    <string name="CLICK_BUTTON_LATER">请不要频繁点击...</string>
+    <string name="NOTIFY_INCOMING_DIALOG">来电已接,视频暂停,请重新请求视频...</string>
+    <string name="ZTENV_ERROR_TIMEOUT">网络连接超时,请重新连接...</string>
+
+    <string name="EnjoryNow">马上体验</string>
+	<string name="Cancel">取消</string>
+	<string name="Rename">重命名</string>
+	<string name="Property">属性</string>
+	<string name="Delete">删除</string>
+	<string name="FileName">文件名:</string>
+	<string name="FilePath">文件路径:</string>
+	<string name="CreateTime">创建时间:</string>
+	<string name="Sure">确定</string>
+	<string name="SDcardUnChecked">未检测到存储卡</string>
+	<string name="RecordFileUnChecked">未检测到视频文件</string>
+	<string name="ImageFileUnChecked">未检测到图片文件</string>
+	<string name="RenameFileFailed">重命名文件失败</string>
+	<string name="RENAME_FILE_DUPLICATE">文件名重复,重命名失败</string>
+	<string name="RecordManage">录像管理</string>
+	<string name="ImageManage">图片管理</string>
+	<string name="PrepareToScanMediaAndWait">正在扫描媒体文件，请稍候</string>
+	<string name="IsScanMedia">系统已经接受到扫描请求，正在扫描</string>
+	<string name="MistakeNetwork">您的网络出错啦！</string>
+	<string name="InputCorrectKey">请输入正确的授权Key！</string>
+	<string name="TrafficsUse">流量使用</string>
+	
+    <!-- 按钮显示：播放  截图 全屏 控制 录像 返回 -->
+    <string name="buttonExplain_Play">播放</string>
+    <string name="buttonExplain_Snap">抓图</string>
+    <string name="buttonExplain_Fullscreensel">全屏</string>
+    <string name="buttonExplain_OpenPTZ">控制</string>
+    <string name="buttonExplain_Record">录像</string>
+    <string name="buttonExplain_Return">返回</string>
+    <string name="buttonExplain_Next">后路</string>
+    <string name="buttonExplain_Pre">前路</string>
+    <string name="ERROR_OF_QUERY_PLATFORM_CONFIGURATION">请配置好该摄像头的录像查询平台</string>
+    <string name="NO_RECORD_OF_CURRENT_CAMERA">未查询到录像，请设置其他时间段</string>
+
+    <!-- 抓图时存储卡的提示信息 -->
+    <string name="CAN_NOT_SNAP_PICTURE">视频尚未请求成功,不能抓图...</string>
+    <string name="STORAGESTATE_SNAP_SUCCESS">抓图成功..</string>
+    <string name="STORAGESTATE_FULL">存储卡已满...</string>
+    <string name="STORAGESTATE_FILEPATHERROR">抓图失败,请确文件路径有效...</string>
+    <string name="STORAGESTATE_WRITELOGERROR">向存储卡写日志出错...</string>
+    <string name="STORAGESTATE_IOException">抓图失败,请确保存储卡有效...</string>
+    <string name="STORAGESTATE_MEDIA_MOUNTED">存储卡可读写</string>
+    <string name="STORAGESTATE_MEDIA_MOUNTED_READ_ONLY">存储卡只读</string>
+    <string name="STORAGESTATE_MEDIA_SHARED">存储卡连接USB</string>
+    <string name="STORAGESTATE_MEDIA_BAD_REMOVAL">存储卡已拔出</string>
+    <string name="STORAGESTATE_MEDIA_UNMOUNTABLE">存储卡不能被挂载</string>
+    <string name="STORAGESTATE_MEDIA_NOFS">存储卡使用不支持的文件系统</string>
+    <string name="STORAGESTATE_MEDIA_CHECKING">正在检测存储卡</string>
+    <string name="STORAGESTATE_MEDIA_UNMOUNTED">存储卡未挂载</string>
+    <string name="STORAGESTATE_MEDIA_REMOVED">存储卡被移除</string>
+    <string name="STORAGESTATE_CREATE_FOLDER_FAILED">文件夹创建失败</string>
+    
+    <!-- 录像信息 -->
+    <string name="CAN_NOT_RECORD">视频尚未请求成功,不能录像...</string>
+    <string name="recordStoreAddress">录像地址:</string>
+    <string name="inputRecordStoreAddress">请输入录像存储地址</string>
+    <string name="record_successfully">录像成功</string>
+    <string name="storage_is_full">存储卡已满...</string>
+    <string name="unuseful_sdcard">没有可用的存储卡</string>
+    <string name="recorderSize">录像大小:</string>
+    <string name="recorderQueryList">录像查询结果</string>
+    <string name="recorderQuery">录像查询</string>
+    <string name="warningQuery">告警查询</string>
+    <string name="mapQuery">地图</string>
+    <string name="camera_item_map_text">地图</string>
+    <string name="camera_item_detail">详细信息</string>
+    <string name="pu_item_map_text">地图</string>
+    <string name="pu_item_detail">详细信息</string>
+    <string name="office_item_map_text">地图</string>
+    <string name="office_item_detail">详细信息</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="last_update">上次更新</string>
+    <string name="remember_pwd">记住密码</string>
+    <string name="office">分组</string>
+    <string name="camera">摄像头</string>
+    <string name="pu">编码器</string>
+    <string name="realAlarm">实时告警</string>
+	<string name="favorite">收藏夹</string>
+	<string name="tab_favorite">收藏</string>
+	<string name="item_favorite_add">添加收藏</string>
+	<string name="item_favorite_del">删除收藏</string>
+	<string name="map">查看地图</string>
+	<string name="item_map">查看地图</string>
+    <string name="hint_recorder_begin_time">录像开始时间格式:2012-03-04-19-05</string>
+    <string name="hint_recorder_end_time">录像结束时间格式:1985-03-04-09-55</string>
+    <string name="all_time_recorder">所有录像</string>
+    <string name="recorder_search_back">返回</string>
+    <string name="recorder_search">查&#160;询</string>
+    <string name="end_time">结束时间:</string>
+    <string name="begin_time">开始时间:</string>
+
+    <string name="clickToLoadAllFavorite">刷新加载全部摄像头</string>
+    <string name="addFavoriteSuccess">收藏摄像头成功</string>
+    <string name="DelFavoriteSuccess">删除摄像头收藏成功</string>
+    <string name="AddToFavoriteWating">正在添加收藏,请稍候</string>
+    <string name="DelFromFavoriteWating">正在从收藏夹删除摄像头,请稍候</string>
+    
+    <!-- DEVICE_KIND -->
+    <string name="OFFICE">局站</string>
+    <string name="PLATFORM_DEVICE">平台设备</string>
+    <string name="ENCODER">编码器</string>
+    <string name="DECODER">解码器</string>
+    <string name="CAMERA">摄像头</string>
+    <string name="ALARM_DEVICE">告警设备DI</string>
+    <string name="DO_DEVICE">DO设备</string>
+    <string name="TV_WALL">电视墙设备</string>
+    <string name="AI_DEVICE">AI设备</string>
+    <string name="VIRTUAL_ACCESS">虚拟接入</string>
+    <string name="DCI_DEVICE">数采仪设备</string>
+    <string name="UNKNOWN_DEVICE">未知设备</string>
+
+    <!--
+	 * @brief DEVICE_TYPE 设备类型，定义了中心服务器和客户端的类型
+	 * 
+	 *        服务器的类型可以是多种服务类型的组合，0x0003 = CENTER_SERVER | CONNECT_SERVER
+	 *        表明该服务器集接入和管理服务器与一体，也就是在该设备上同时运行了中心服务器和接 入服务器的模块。客户端类型不可重叠
+    -->
+    <string name="UNKNOWN_TYPE">未知类型</string>
+    <string name="CENTER_SERVER">中心服务器</string>
+    <string name="CONNECT_SERVER">接入服务器</string>
+    <string name="DISPATCH_SERVER">视频转发服务器</string>
+    <string name="STORE_SERVER">存储服务器</string>
+    <string name="MONITOR_SERVER">设备监控服务器 目前改为业务服务器</string>
+    <string name="DATABASE_SERVER">数据库服务器</string>
+    <string name="WEB_SERVER">Web服务器</string>
+    <string name="AAA_SERVER">AAA服务器</string>
+    <string name="TV_SERVER">电视墙服务器</string>
+    <string name="CONFIRM_STORE_SERVER">复核存储服务器</string>
+    <string name="PIC_SERVICE_SERVER">图片存储业务服务器></string>
+    <string name="VAU_SERVER">移动视频服务器</string>
+    <string name="PICC_SERVICE_SERVER">人保业务服务器</string>
+    <string name="MANAGER_CLIENT">管理客户端</string>
+    <string name="VIDEO_CLIENT">视频客户端</string>
+    <string name="WEB_CLIENT">web客户端</string>
+    <string name="PHYSICAL_CENTER">物理中心服务器</string>
+    <string name="STORE_BACK_SERVER">备份存储服务器</string>
+    <string name="DISPATCH_BACK_SERVER">备份转发服务器</string>
+    <string name="PUPROXY_SERVER">PU代理服务器</string>
+    <string name="API_COMMUNICATION_SERVER">>API互通业务服务器</string>
+    <string name="VAU_BACK_SERVER">备份移动视频服务器</string>
+    <string name="CONNECT_BACK_SERVER">备份接入服务器</string>
+    <string name="TRANSCODE_SERVER">视频转码服务器</string>
+    <string name="TRANSCODE_BACK_SERVER">备份视频转码服务器</string>
+    <string name="SA_SERVER">SA服务器</string>
+    <!-- 0x2000系列为编码器 -->
+    <string name="DEVICE_3000">3000设备</string>
+    <string name="DEVICE_4000">4000设备</string>
+    <string name="DEVICE_5000">5000设备</string>
+    <string name="DEVICE_STD">标准备</string>
+    <string name="DEVICE_STD5000">标准5000设备</string>
+    <string name="DEVICE_8000">8000设备(8474)</string>
+    <string name="DEVICE_8000Plus">8000+设备(8493)</string>
+    <string name="DEVICE_8000SDK">8000SDK设备(8498)</string>
+    <string name="DEVICE_ONVIF">onvif设备(8533)</string>
+
+    <!-- 0x3000系列为解码器 -->
+    <string name="DECODER_4000">中兴4000系列</string>
+    <string name="DECODER_5000">海康C5000解码卡</string>
+    <string name="DECODER_6000">海康C6000系列解码器 (12291)</string>
+    <string name="DECODER_STD">标准解码器</string>
+
+    <!-- 0x4000系列为报警设备 -->
+    <string name="ANNNUNCIATE_RECVER">报警接收机</string>
+    <string name="ANNNUNCIATE_WARNER">报警主机</string>
+    <string name="CLERK">营业员类型，双向语音时使用</string>
+
+    <!-- ALARM_TYPE  前端编码器告警1-10 -->
+    <string name="ALARM_TYPE_DI">DI告警</string>
+    <string name="ALARM_DISK_FULL">硬盘满告警</string>
+    <string name="ALARM_NO_SIGNAL">无视频告警</string>
+    <string name="ALARM_TYPE_MOVE_DECTION">移动侦测告警</string>
+    <string name="ALARM_DISK_NOT_FORMAT">硬盘未格式化</string>
+    <string name="ALARM_DISD_RW_ERROR">读写硬盘出错</string>
+    <string name="ALARM_SHIELD">遮挡告警</string>
+    <string name="ALARM_VS_UPGRADE">前端升级</string>
+    <string name="ALARM_ACCESS_VIOLATE">非法访问</string>
+    <string name="ALARM_TYPE_AI">AI告警</string>
+
+    <!-- 智能告警 11-40 -->
+    <string name="ALARM_OBJECT_REMOVED">物品被盗</string>
+    <string name="ALARM_OBJECT_LEFT">物品遗留</string>
+    <string name="ALARM_NO_PARKING">非法停车</string>
+    <string name="ALARM_PERIMETER">周界保护</string>
+    <string name="ALARM_ABNORMAL_VEL">非正常速度</string>
+    <string name="ALARM_CONVERSE">逆行</string>
+    <string name="ALARM_TRIPWIRE">绊网</string>
+    <string name="ALARM_LOITER">闲逛</string>
+    <string name="ALARM_SLIP_UP">滑到</string>
+    <string name="ALARM_FIRE">火情</string>
+    <string name="ALARM_SMOKE">烟雾</string>
+    <string name="ALARM_HELP">紧急求助</string>
+    <string name="ALARM_ASSEMBLE">人群聚集</string>
+
+    <!-- add by lhf on 2012.3.14 新加部分智能告警类型 -->
+    <string name="ALARM_FIGHT">打架 如果场景中有打架; 则抓图报警</string>
+    <string name="ALARM_LEAVEREGION">离开区域 离开指定区域</string>
+    <string name="ALARM_ENVIRCHANGE">环境突变 当环境或者场景发生突然变化的时侯;会出现这样的报警; 比如摄像头移动之类的</string>
+    <string name="ALARM_LEFTTHROUGHLINE">左穿越拌线 左穿越指定规则线</string>
+    <string name="ALARM_RIGHTTHROUGHLINE">右穿越拌线 右穿越指定规则线</string>
+    <string name="ALARM_OBJECT_MOVE">物品位移 对指定物品进行保全;防止被盗或者移动遮挡</string>
+    <string name="ALARM_OBJECT_BLOCK">物品遮挡 对指定物品进行保全;防止被盗或者移动遮挡</string>
+    <string name="ALARM_OBJECT_STRANDED">物品滞留 当有人或者物在一个区域内停留一段时间</string>
+    <!--
+	 * < 围栏入侵
+	 * 用户设定一道或多道任意形状的虚拟围栏，每一道虚拟围栏的长度、高度和厚度可以独立设置，此外还可以指定攀越（或穿越）某个虚拟围栏的非法方向
+	 * （两个单向或者双向）。当入侵者在非法方向上攀越（或穿越）围栏时将自动触发报警。
+	 * 这种检测模式非常适合用于各种周界和围栏的入侵防范，例如私人住宅区（防止进入）、监狱（防止逃出）、边境（防止任意方向穿越）等应用场合
+    -->
+    <string name="ALARM_FENCE_DETECTION">围栏入侵</string>
+
+    <!-- 平台服务器告警 40- -->
+    <string name="ALARM_THREAD_NO_RESPONSE">服务器线程无响应</string>
+    <string name="ALARM_DATABASE_ABNORMAL">数据库异常</string>
+    <string name="ALARM_STORE_NO_DATA">存储服务器无数据接收(单路)</string>
+    <string name="ALARM_VIDEO_REQUEST">转发服务器向前端PU申请视频失败(单路)</string>
+    <string name="ALARM_STORE">存储服务器异常(超过指定路数的摄像头无视频数据)</string>
+    <string name="ALARM_DISPATCH">转发服务器异常(超过指定路数的摄像头视频请求失败)</string>
+    <string name="ALARM_CMDRUN_ABNORMAL">数据库存储过程执行异常，中心执行命令时间过长连续10次</string>
+    <string name="ALARM_CMDPOOL_FULL">中心缓冲区满</string>
+    <string name="ALARM_STORE_WRITE">存储磁盘写性能异常</string>
+    <string name="ALARM_LOSE_RATE">丢包率异常(转发上同时多路丢包率超过临界值)</string>
+    <string name="ALARM_DISK_THRESHOLD">存储服务器磁盘预警--到达设定告警阈值，进行告警></string>
+
+    <!-- 车载设备告警80-95 -->
+    <string name="ALARM_VS_OVERSPEED">超速告警</string>
+    <string name="ALARM_VS_NOGPSSIGNAL">搜星失败告警</string>
+    <string name="ALARM_VS_OVERRANGE">越界告警</string>
+    <string name="NETWORK_INTERRUPT">设备中断</string>
+    <string name="CPU_TOO_HIGH">CPU占用率过高</string>
+    <string name="MEMORY_USAGE_TOO_HIGH">内存占用率过高</string>
+    <string name="UPLINK_NETWORK_TRAFFIC_TOO_HIGH">上行网络流量过高</string>
+    <string name="DOWNLINK_NETWORK_TRAFFIC_TOO_HIGH">下行网络流量过高</string>
+
+    <!-- ALARM_LINKAGE_TYPE -->
+    <string name="LINKAGE_GOTO_POSITION">转到预置位</string>
+    <string name="LINKAGE_RECORD">告警录象</string>
+    <string name="LINKAGE_DO">DO告警联动</string>
+
+    <!-- webservices error -->
+    <string name="ERROR_USERNAME_OR_PASSWORD_IS_NULL">用户名或密码为空</string>
+    <string name="ERROR_FAILED_CONNECT_TO_CMS">连接中心失败</string>
+    <string name="ERROR_DEFAULT_ERRORCODE">WPU默认错误</string>
+    <string name="ERROR_GET_CAMERA_SESSION_TIMEOUT">获取摄像机时与服务器连接失效</string>
+    <string name="ERROR_GET_PU_SESSION_TIMEOUT">获取编码器时与服务器连接失效</string>
+    <string name="ERROR_GET_OFFICE_SESSION_TIMEOUT">获取局站时与服务器连接失效</string>
+    <string name="ERROR_GET_CAMERA_USERNAME_WRONG">获取摄像头用户名出错</string>
+    <string name="ERROR_GET_PU_USERNAME_WRONG">获取编码器时用户名出错</string>
+    <string name="ERROR_GET_OFFICE_USERNAME_WRONG">获取局站时用户名出错</string>
+    <string name="ERROR_GET_RECORDER_SESSION_TIMEOUT">获取录像时与服务器连接失效</string>
+    <string name="ERROR_GET_RECORDER_USERNAME_WRONG">获取录像时用户名出错</string>
+    <string name="START_TIME_EMPTY">起始时间为空</string>
+    <string name="TERMINAL_TIME_EMPTY">结束时间为空</string>
+    <string name="FORMAT_OF_START_TIME_WRONG">开始时间格式出错</string>
+    <string name="FORMAT_OF_TERMINAL_TIME_WRONG">结束时间格式出错</string>
+    <string name="TERMINAL_TIME_EXIST_BEFORE_START_TIME">开始时间不能超过结束时间</string>
+    <string name="AlarmQueryTimeMustBetweenThisMonth">不支持跨月查询</string>
+    <string name="AlarmQueryTimeMustBetweenThisYear">不支持跨年查询</string>
+
+    <!-- webservices连接时，登录，获取设备等IO异常 -->
+    <string name="ERROR_WEBSERVICES_LOGIN_XmlPullParserException">解析出错,确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_LOGIN_IOException">网络不稳定，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_LOGIN_Exception">登录时异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_LOGOUT_XmlPullParserException">注销用户解析出错,确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_LOGOUT_IOException">网络不稳定,注销失败</string>
+    <string name="ERROR_WEBSERVICES_LOGOUT_Exception">注销用户异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_getCameraList_XmlPullParserException">解析摄像头出错</string>
+    <string name="ERROR_WEBSERVICES_getCameraList_IOException">网络异常,无法获取摄像头，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCameraList_Exception">获取摄像头异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_getPUList_XmlPullParserException">解析编码器出错</string>
+    <string name="ERROR_WEBSERVICES_getPUList_IOException">网络异常,无法获取编码器，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getPUList_Exception">获取编码器异常,确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_getOfficeList_XmlPullParserException">解析局站出错</string>
+    <string name="ERROR_WEBSERVICES_getOfficeList_IOException">网络异常,无法获取局站，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getOfficeList_Exception">获取局站异常，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCurAlarmList_XmlPullParserException">解析告警出错</string>
+    <string name="ERROR_WEBSERVICES_getCurAlarmList_IOException">网络异常,无法获取告警，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCurAlarmList_Exception">获取告警异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_SENDHEART_XmlPullParserException">解析心跳出错</string>
+    <string name="ERROR_WEBSERVICES_SENDHEART_IOException">网络异常,无法获取心跳响应</string>
+    <string name="ERROR_WEBSERVICES_SENDHEART_Exception">心跳未知异常</string>
+    <string name="ERROR_WEBSERVICES_getRecorderList_XmlPullParserException">解析录像出错r</string>
+    <string name="ERROR_WEBSERVICES_getRecorderList_IOException">网络异常,无法获取录像</string>
+    <string name="ERROR_WEBSERVICES_getRecorderList_Exception">获取录像未知异常</string>
+    <string name="ERROR_WEBSERVICES_getCurExceptionList_XmlPullParserException">解析告警出错</string>
+    <string name="ERROR_WEBSERVICES_getCurExceptionList_IOException">网络异常,无法获取告警，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCurExceptionList_Exception">获取告警异常，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCurOneAlarmList_XmlPullParserException">解析告警出错</string>
+    <string name="ERROR_WEBSERVICES_getCurOneAlarmList_IOException">网络异常,无法获取告警，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getCurOneAlarmList_Exception">获取告警异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_getFavoriteList_XmlPullParserException">解析收藏夹出错</string>
+    <string name="ERROR_WEBSERVICES_getFavoriteList_IOException">网络异常,无法获收藏夹，确保网络稳定</string>
+    <string name="ERROR_WEBSERVICES_getFavoriteList_Exception">获取收藏夹异常，确保网络正常</string>
+    <string name="ERROR_WEBSERVICES_addOrDelFavoriteList_XmlPullParserException">解析添加/删除摄像头出错</string>
+    <string name="ERROR_WEBSERVICES_addOrDelFavoriteList_IOException">网络异常,无法添加/删除摄像头</string>
+    <string name="ERROR_WEBSERVICES_addOrDelFavoriteList_Exception">添加/删除摄像头未知异常</string>
+
+    <!-- cms错误 -->
+    <string name="REQUEST_VIDEO_SEND_TIMEOUT">请求视频发送超时</string>
+    <string name="REQUEST_VIDEO_ROUTER_FAIL">请求视频路由失败</string>
+    <string name="REQUEST_VIDEO_ROUTER_ERROR">		服务器获取路由错误</string>
+    <string name="NO_AVALIABLE_VIDEO_ROUTER">		无可用的视频路由</string>
+    <string name="VIDEO_DATA_INTERRUPTED">		视频中断</string>
+    <string name="RECONNECTING_DISPATCH_SERVER">		正在重新连接服务器</string>
+    <string name="MEDIA_SESSION_INTERRUPT">		媒体会话中断</string>
+    <string name="UNSUPPORTED_ENCODER_TYPE">		不支持的编码设备类型</string>
+    <string name="UNSUPPORTED_VIDEO_LINK_MODEL">		不支持的视频传输方式</string>
+    <string name="PU_NOT_REGISTER">		设备未注册</string>
+    <string name="ERROR_NOT_FOUND_LONG_CONNECT">		连接未找到</string>
+    <string name="ERROR_CONNECT_FAILURE_BEGIN">		开始建立连接的时候发生失败</string>
+    <string name="ERROR_CONNECT_FAILURE_IO_STREAM">		在I/O流上发起异步读写操作时失败，导致连接失败</string>
+    <string name="ERROR_NOW_LONG_CONNECT">		正在建立长连接</string>
+    <string name="CONNECT_SERVER_FAIL">		连接服务器失败</string>
+    <string name="REQUEST_TIME_OUT">		请求超时</string>
+    <string name="ERROR_SERVER_INTERRUPT">		连接服务器中断</string>
+    <string name="ERROR_CLIENT_LOGIN">		客户端重连后登录失败</string>
+    <string name="ERROR_RELOGIN_TIMEOUT">		客户端重连后登录超时</string>
+    <string name="ERROR_SERVER_NOT_CONNECT">		服务器未连接</string>
+    <string name="ERROR_UNREACHED">		目的不可到达</string>
+    <string name="ERROR_ACCESS_DATABASE">		访问数据库失败</string>
+    <string name="ERROR_NO_RECORD">		无数据信息</string>
+    <string name="ERROR_SERVER_LOGINED">		服务器已登录</string>
+    <string name="ERROR_USER_SUSPEND">		用户已停用</string>
+    <string name="ERROR_NO_AUTHORITY">		没有执行操作的权限</string>
+    <string name="ERROR_NO_USER">		用户不存在</string>
+    <string name="ERROR_INVALID_PWD">		密码错误</string>
+    <string name="ERROR_MAX_LOGINED">		同时登录用户数已达到最大</string>
+    <string name="ERROR_SESSION_EXIST">		会话ID重复</string>
+    <string name="ERROR_SESSION_NULL">		空session id错误</string>
+    <string name="ERROR_USERINFO_NULL">		无可用的用户信息</string>
+    <string name="ERROR_USER_LOGINING">		客户端已经有用户登录</string>
+    <string name="ERROR_USER_NAME_REPEATED">		用户名重复</string>
+    <string name="ERROR_MAX_USER_COUNT">		用户数已达到最大</string>
+    <string name="ERROR_GROUP_NAME_REPEQTED">		用户组名称重复</string>
+    <string name="ERROR_BUFFER_NOT_ENOUGH">		缓冲区不足</string>
+    <string name="ERROR_SESSION_NOT_INIT">		会话没有初始化</string>
+    <string name="ERROR_SERVER_FAULT">		服务器错误</string>
+    <string name="ERROR_COMMAND_BUFFER_FULL">		服务器命令缓冲区满</string>
+    <string name="ERROR_OUT_OF_MEMORY">		内存不足</string>
+    <string name="ERROR_SERVER_NOT_SUPPORT">		协议不支持</string>
+    <string name="ERROR_ALARM_CONFIRMED">		告警已确认</string>
+    <string name="ERROR_DEVICE_NOT_FOUND">		设备未找到</string>
+    <string name="ERROR_DEV_STATE_UNKNOWN">		设置状态未知</string>
+    <string name="ERROR_SESSION_TIMEOUT">		服务器端session超时</string>
+    <string name="REQUEST_VIDEO_HEADER_TIMEOUT">		请求视频头超时</string>
+    <string name="ERROR_MAX_GROUP_LOGIN">		大客户登录用户数达到最大</string>
+    <string name="ERROR_NULL_POINTER">		空指针错误</string>
+    <string name="ERROR_INVALID_ARGUMENT">		非法参数错误</string>
+    <string name="ERROR_PROTOCOL_PARSE">		协议解析错误</string>
+    <string name="ERROR_PU_OFFLINE">		设备不在线</string>
+    <string name="ERROR_PU_NOT_SUPPORT_PROTOCOL">		前端PU不支持</string>
+    <string name="RET_FAILED">		访问失败</string>
+    <string name="ERROR_CLIENT_FAULT">		客户端类型未授权</string>
+    <string name="ERROR_ENTERPRISE_PREFIX_REPEATED">		大客户前缀重复</string>
+    <string name="ERROR_ENTERPRISE_NAME_REPEATED">		大客户名称重复</string>
+    <string name="ERROR_ENTERPRISE_ADMIN_EXIST">		大客户已经有管理员</string>
+    <string name="ERROR_HAVE_CHILD_OFFICE">		局站下面有子局站，不能删除</string>
+    <string name="ERROR_OFFICE_NAME_REPEATED">		局站重名</string>
+    <string name="ERROR_KEY_CONFLICT">		数据库存在该数据或相关数据</string>
+    <string name="ERROR_NEED_MAC_BOUND">		用户需要MAC绑定</string>
+    <string name="ERROR_NEED_USBKEY_BOUND">		用户需要USB KEY绑定</string>
+    <string name="ERROR_MAC_VALIDATE">		服务器验证失败</string>
+    <string name="ERROR_USBKEY_VALIDATE">		服务器验证失败</string>
+    <string name="ERROR_MAC_USBKEY_VALIDATE">		服务器验证失败</string>
+    <string name="ERROR_ENCODER_PORT_REPEATED">		编码器和路数重复</string>
+    <string name="ERROR_USBKEY_HAVE_BOUND">		客户端提供的USB Key已经被绑定</string>
+    <string name="ERROR_ACCESS_UKEY">		访问USB Key发生错误</string>
+    <string name="ERROR_NO_UKEY">		没有插入USB Key</string>
+    <string name="ERROR_NO_USERLOCKCOUNT">		数据库没有设置锁定次数初始记录</string>
+    <string name="ERROR_NO_USERLOCKTIME">		数据库没有设置锁定时间初始记录</string>
+    <string name="ERROR_USERLOCK">		用户被锁定</string>
+    <string name="ERROR_MACLOCK">		用户IP被锁定</string>
+    <string name="ERROR_USER_HAVE_GROUP">		用户存在已创建的组，不能删除</string>
+    <string name="ERROR_DEVICE_STOPPED">		设备已停用</string>
+    <string name="ERROR_SERVER_INUSE">		服务器正在使用不能被删除</string>
+    <string name="ERROR_REG_SERVER_NOT_MATCH">		注册服务器不匹配</string>
+    <string name="DVR_BUSY" code="-536861182">		PU忙，请稍后再试</string>
+    <string name="ERROR_PROVINCE_NAME_EXIST">		省名称已存在</string>
+    <string name="ERROR_PROVINCE_FULL">		创建省数量达到最大值100</string>
+    <string name="ERROR_PROVINCE_HAVE_CITY">		省下有市不能删除</string>
+    <string name="ERROR_PROVINCE_HAVE_OFFICE">		省下有局站不能删除</string>
+    <string name="ERROR_CITY_NAME_EXIST">		市名称已存在</string>
+    <string name="ERROR_CITY_FULL">		创建市数量达到最大值100</string>
+    <string name="ERROR_CITY_HAVE_OFFICE">		市下有局站不能删除</string>
+    <string name="ERROR_5000PU_IP_EXIST">		5000设备的IP地址已存在</string>
+    <string name="ERROR_DATABASE_IS_EXIST">		数据库只能添加一个，目前已经存在</string>
+    <string name="ERROR_BUSINESS_NUMBER_REPEATED">		业务号重复</string>
+    <string name="ERROR_SDKPU_CANNOTUSE">		5000设备不可用</string>
+    <string name="ERROR_DATABASE_CMS_EXIST">		系统中已经存在一个中心服务器</string>
+    <string name="ERROR_OLDVERSION_CANNOT_USED">		客户端版本太旧，请升级新版本</string>
+    <string name="PU_AUDIO_CHANNEL_USED">		前端PU语音通道已占用</string>
+    <string name="ERROR_DECODER_OFFLINE">		解码器不在线</string>
+    <string name="ERROR_NO_MANUAL_CRUISE_RECORD">		没有添加手动巡航任务</string>
+    <string name="ERROR_NO_STORE_TYPE">		摄像头设置为不存储</string>
+    <string name="ERROR_MAX_CAMERA_COUNT">		创建摄像头数达到最大</string>
+    <string name="ERROR_NAME_REPEATED">		名字重复</string>
+    <string name="ERROR_CHILDOFFICE_OVERTAKE_PARENT">		非法操作，子局站设置的权限大于父局站的权限</string>
+    <string name="NO_AUTHORITY_TO_ATTEND_MEETING">		用户没有参加会议的权限</string>
+    <string name="ERROR_STORE_NUM_LIMIT_PRE">		存储路数已达预警值</string>
+    <string name="ERROR_STORE_NUM_LIMIT">		存储服务器路数配置已满</string>
+    <string name="ERROR_STORE_SPACE_LIMIT_PRE">		存储服务器空间已达预警值</string>
+    <string name="ERROR_STORE_SPACE_LIMIT">		存储服务器空间已满，不能添加摄像头</string>
+    <string name="ERROR_OVER_DOWNLOAD_DURATION">		超过上传时间段</string>
+    <string name="PU_REQUEST_FAULT">		前端PU请求出错</string>
+    <string name="ERROR_PUTYPE_MAX_CAMERA_COUNT">		该PU类型拥有的摄像头数达到最大，创建摄像头失败</string>
+    <string name="MEETINGROOM_IN_USE">		该会议室在使用中，不能编辑</string>
+    <string name="ERROR_SERVER_NOT_MATCH">		服务器ID不存在或者服务器类型不匹配</string>
+    <string name="ERROR_VIDEO_RESOURCE_LIMITED">		视频资源达到极限</string>
+    <string name="ERROR_USER_CANNOT_CHANGE_OFFICE">		用户拥有其他局站设备权限，不允许更改局站</string>
+    <string name="ERROR_MAX_FACTORY_DEVICE_LIMITED">		厂家未授权或厂家设备数达到最大</string>
+    <string name="PU_LOGIN_FAIL">		登录PU失败</string>
+    <string name="ERROR_TRANSCODE_TEMPLET_EXIST">		转码模板配置已经存在</string>
+    <string name="ERROR_CSG_LIMIT">		该接入服务器已超出能力限制，请选择其他接入服务器</string>
+    <string name="ERROR_MDU_LIMIT">		该转发服务器已超出能力限制，请选择其他转发服务器</string>
+    <string name="ERROR_STORE_LIMIT">		该存储服务器已超出能力限制，请选择其他存储服务器</string>
+    <string name="ERROR_TVS_LIMIT">		该电视墙服务器已超出能力限制，请选择其他电视墙服务器</string>
+    <string name="ERROR_VAU_LIMIT">		该移动视频服务器已超出能力限制，请选择其他移动视频服务器</string>
+    <string name="ERROR_TRANSCODE_LIMIT">		该转码服务器已超出能力限制，请选择其他转码服务器</string>
+    <string name="ERROR_DISPATCH_OFFLINE">		媒体转发服务器不在线，无法申请视频</string>
+    <string name="ERROR_STORE_OFFLINE">		存储服务器不在线，无法查看录像</string>
+    <string name="ERROR_ADC_CUSTOM_NOT_EXIST">大客户不是ADC用户，不允许设置</string>
+</resources>

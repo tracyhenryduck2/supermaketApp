@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="Xiaotieshi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>公示</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/gongshi.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+	.gongshi-type.current {color: red}
+	.md {position: fixed;top:0px;left: 0px}
+</style>
+</head>
+<body ng-controller="XiaotieshiController as Xiaotieshi">
+<div class="md">
+<div id="top" style="width:100%">
+	<img id="top-img" src="images/app-3.jpg">
+	<div class="clear"></div>
+</div>
+<div id="type-ban" style="width:100%">
+	<div ng-click="Xiaotieshi.switch(7);" class="gongshi-type" ng-class="{'current':Xiaotieshi.type==7}">销毁消息</div>
+	<div ng-click="Xiaotieshi.switch(8);" class="gongshi-type" ng-class="{'current':Xiaotieshi.type==8}">抽检消息</div>
+	<div ng-click="Xiaotieshi.switch(9);" class="gongshi-type" ng-class="{'current':Xiaotieshi.type==9}">自检消息</div>
+	<div ng-click="Xiaotieshi.switch(10);" class="gongshi-type" ng-class="{'current':Xiaotieshi.type==10}">其他消息</div>
+	<div class="clear"></div>
+</div>
+</div>
+<!-- <div class="ship3" ng-repeat="map in Xiaotieshi.list" ng-click="Xiaotieshi.detail(map.id,map.type_id)">
+
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+        <p class="xwbt2">>>MORE</p>
+  </div>
+
+</div> -->
+<div id="content">
+<div id="no-data"></div>
+<div class="ship3 ng-scope" ng-repeat="map in Xiaotieshi.list" ng-click="Xiaotieshi.detail(map.id,map.type_id)">
+
+  <div class="xinwenwenzi2">
+    <p class="xwbt ng-binding"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1 ng-binding">{{map.digest}}</p>
+        <p class="xwbt2">&gt;&gt;MORE</p>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

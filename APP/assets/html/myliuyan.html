@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="Supermarket">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+
+  <title>我的留言</title>
+  <script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myliuyan.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+ <link rel="stylesheet" href="css/css.css"  type="text/css" />
+ <link rel="stylesheet" href="css/style.css"  type="text/css" />
+<style type="text/css">
+	.chat-thread img.huifu {    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: -80px;}
+ 	.chat-thread img.fasong {    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -80px;}   
+    .input {
+    border-radius: 3px;
+    width: 80%;
+    height: 30px;
+    border: #e1e1e1 1px solid;
+    padding: 2%;
+    color: #999;
+}
+.mokuai {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #D6D4D4;
+}
+.time1 {   width: 60%;
+    margin: 0 auto;
+    padding: 6px 5px 6px 5px;
+    background-color: #D1E9E9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mokuai .huifu {border-radius: 50%}
+</style>
+</head>
+
+<body ng-controller="SupermarketController as Supermarket">
+
+  <div id="convo">  
+<ul class="chat-thread">
+    <div class="mokuai" ng-repeat="map in Supermarket.list">
+     <div class="time1">{{map.create_time*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</div>
+	<li class="fasong">{{map.content}}<img class="huifu" ng-if="map.avatar!=null&&map.avatar!=''&& map.avatar.indexOf('http://wx') >= 0 " ng-src="{{map.avatar}}"><img class="huifu" ng-if="map.avatar!=null&&map.avatar!=''&& map.avatar.indexOf('http://wx') < 0 " ng-src="http://{{Supermarket.url}}/{{map.avatar}}"><img class="huifu" ng-if="map.avatar==null||map.avatar==''" src="images/profle.png"></li>
+	<li class="huifu" ng-show="map.feedback_content!=null&&map.feedback_content!=''">{{map.feedback_content}}<img class="fasong" src="images/img_04.png"></li>
+	<div class="clear"></div>
+	</div>
+
+<!-- 	    <div class="mokuai">
+	         <div class="time1">2016-12-12 05:32:31</div>
+	<li class="fasong">Are we meeting today?<img class="huifu" src="images/img_04.png"></li>
+	<li class="huifu">yes, what time suits you?<img class="fasong" src="images/img_04.png"></li>
+		<div class="clear"></div>
+	</div>
+
+	    <div class="mokuai">
+	         <div class="time1">2016-12-12 05:32:31</div>
+	<li class="fasong">Are we meeting today?<img class="huifu" src="images/img_04.png"></li>
+	<li class="huifu">yes, what time suits you?<img class="fasong" src="images/img_04.png"></li>
+		<div class="clear"></div>
+	</div>
+
+	    <div class="mokuai">
+	         <div class="time1">2016-12-12 05:32:31</div>
+	<li class="fasong">Are we meeting today?<img class="huifu" src="images/img_04.png"></li>
+	<li class="huifu">yes, what time suits you?<img class="fasong" src="images/img_04.png"></li>
+		<div class="clear"></div>
+	</div>
+
+	    <div class="mokuai">
+	         <div class="time1">2016-12-12 05:32:31</div>
+	<li class="fasong">Are we meeting today?<img class="huifu" src="images/img_04.png"></li>
+	<li class="huifu">yes, what time suits you?<img class="fasong" src="images/img_04.png"></li>
+		<div class="clear"></div>
+	</div> -->
+
+</ul>
+</div>
+<div id="no-data"></div>
+</body>
+
+</html>

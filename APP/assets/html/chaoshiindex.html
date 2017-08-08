@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="MarketIndex">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>超市首页</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/yxMobileSlider.js"></script>
+<script type="text/javascript" src="js/supermarketIndex.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style type="text/css">
+.zk {font-size: 0.9em;
+    margin-left: 5%;
+    text-decoration: underline;
+    width: 30%;
+    color: blue;}
+.shexiang .left {width: 24%;float: left;margin: 3% 3% 3% 3%}
+.shexiang .right {width: 24%;float: right;margin: 3% 3% 3% 3%}
+.shexiang .middle {width: 40%;float: left;text-align: center;margin-top: 10%;}
+.shexiang .part1,.shexiang .part2,.shexiang .part3,.shexiang .part4 {text-align: center;margin-top: 10%}
+.part1 span,.part2 span,.part3 span,.part4 span {font-size: 0.9em;font-weight: bold;}
+.part1 span {color: #9c1114}
+.part2 span {color: #c51718}
+.part3 span {color: #ffba21}
+.part4 span {color: #fe6700}
+.shexiang img {margin-bottom: 10px}
+</style>
+</head>
+<body ng-controller="MarketIndexController as MarketIndex">
+<div id="maincontent" style="display:none">
+
+
+<div class="xwwenzi">
+   <div class="slider">
+ <ul id="ceshi">
+  <li><a><img class="banner_img" src="images/loading.gif" alt=""  /></a></li>
+  </ul>
+ </div>
+</div>
+
+ <div class="shexiang">
+  <div class="left">
+    <div class="part1" ng-show="MarketIndex.videoList_sub.length>0"  ng-click="MarketIndex.gotoVideo(MarketIndex.videoList_sub[0].url)"><img ng-if="MarketIndex.videoList_sub[0].pic_url==''" src="images/default2.jpg"><img ng-if="MarketIndex.videoList_sub[0].pic_url!=''" ng-src="http://{{MarketIndex.url}}/supermarket_images/market/{{MarketIndex.videoList_sub[0].pic_url}}"><span>{{MarketIndex.videoList_sub[0].name}}</span></div>
+    <div class="part3" ng-show="MarketIndex.videoList_sub.length>2" ng-click="MarketIndex.gotoVideo(MarketIndex.videoList_sub[2].url)"><img ng-if="MarketIndex.videoList_sub[1].pic_url==''" src="images/default2.jpg"><img ng-if="MarketIndex.videoList_sub[1].pic_url!=''" ng-src="http://{{MarketIndex.url}}/supermarket_images/market/{{MarketIndex.videoList_sub[2].pic_url}}"><span>{{MarketIndex.videoList_sub[2].name}}</span></div>
+  </div>
+<div class="middle">
+  <img src="images/shexiangtou.jpg">
+  <span style="font-size:1.3em;font-weight:bold">实时拍摄</span>
+</div>
+
+  <div class="right">
+    <div class="part2" ng-show="MarketIndex.videoList_sub.length>1" ng-click="MarketIndex.gotoVideo(MarketIndex.videoList_sub[1].url)"><img ng-if="MarketIndex.videoList_sub[2].pic_url==''" src="images/default2.jpg"><img ng-if="MarketIndex.videoList_sub[2].pic_url!=''" ng-src="http://{{MarketIndex.url}}/supermarket_images/market/{{MarketIndex.videoList_sub[1].pic_url}}"><span>{{MarketIndex.videoList_sub[1].name}}</span></div>
+    <div class="part4" ng-show="MarketIndex.videoList_sub.length>3" ng-click="MarketIndex.gotoVideo(MarketIndex.videoList_sub[3].url)"><img ng-if="MarketIndex.videoList_sub[3].pic_url==''" src="images/default2.jpg"><img ng-if="MarketIndex.videoList_sub[3].pic_url!=''" ng-src="http://{{MarketIndex.url}}/supermarket_images/market/{{MarketIndex.videoList_sub[3].pic_url}}"><span>{{MarketIndex.videoList_sub[3].name}}</span></div>
+  </div>
+  <div class="clear"></div>
+</div> 
+ <div class="anniu2" ng-show="MarketIndex.videoList.length>4" ng-click="MarketIndex.gotoVideoList(MarketIndex.superId)"><a>更多视频</a></div><div class="anniu2" ng-show="MarketIndex.videoList.length<=4" style="text-decoration:none"><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+ <div class="clear"></div> 
+
+
+<div class="bt2" ng-show="MarketIndex.infoList.length>0">信息动态</div>
+<!-- <div class="xbt">Information dynamics</div> -->
+<div class="ship3" ng-repeat="map in MarketIndex.infoList_sub" ng-click="MarketIndex.newsDetail(map.id)">
+  <div class=" xinwenbiaoti1"><img ng-if="map.pic_url==''" src="images/default.png"  alt=""/><img ng-if="map.pic_url!=''" ng-src="http://{{MarketIndex.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div>
+  <div  class="xinwenwenzi1">
+    <p class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+            <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="anniu2" ng-show="MarketIndex.infoList.length>2" ng-click="MarketIndex.gotoxinxi(MarketIndex.superId)"><a>更多信息</a></div><div class="anniu2" ng-show="MarketIndex.infoList.length<=2" style="text-decoration:none"><a>&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+<div class="clear"></div>
+<div class="bt">超市简介</div>
+<div  class="xwnr" id="intro"></div>
+<p class="zk" ng-click="MarketIndex.zk()">{{MarketIndex.wenzi}}<p>
+</div>
+</body>
+<script type="text/javascript">
+  $(".slider").yxMobileSlider({width:240,height:120,during:3000,widthscale:1.00});
+</script>
+</html>

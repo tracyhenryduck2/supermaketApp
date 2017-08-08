@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<title>积分明细</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jifendetail.js"></script>
+</head>
+<body ng-controller="JianguanController as Jianguan">
+
+<div class="jifendetail" ng-repeat="map in Jianguan.list">
+  <div  class="jifendetail-left" ng-switch on="map.get_type">
+    <p  class="first" ng-switch-when="1">首次登录</p>
+    <p  class="first" ng-switch-when="2">收藏</p>
+    <p  class="first" ng-switch-when="3">每日登录</p>
+    <p  class="second">积分余额:{{map.init_point}}</p>
+  </div>
+    <div  class="jifendetail-right">
+    <p  class="first">{{map.log_time *1000 | date:'yyyy-MM-dd'}}</p>
+    <p  class="second">+{{map.point}}</p>
+  </div>
+</div>
+<!-- <div class="jifendetail">
+  <div  class="jifendetail-left">
+    <p  class="first">注册</p>
+    <p  class="second">积分余额:0</p>
+  </div>
+    <div  class="jifendetail-right">
+    <p  class="first">2016-09-11</p>
+    <p  class="second">+20</p>
+  </div>
+</div> -->
+<div id="no-data"></div>
+</body>
+</html>

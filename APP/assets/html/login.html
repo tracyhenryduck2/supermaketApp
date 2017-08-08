@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="Login">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/henryLIB.js"></script>
+<title>登录</title>
+<style type="text/css">
+.wangji {text-align: center;}
+	.wangji img {width: 50px;}
+	.wangji span {color: #939091;}
+	.disanfang {text-align: center;margin-top: 20px}
+.disanfang img.first {width: 20%;margin-right: 5%;margin-left: 25%}
+.disanfang img.second {width: 20%;}
+</style>
+
+</head>
+
+<body style="background:#E5E2E3;" ng-controller="LoginController as Login">
+<div id="kongxi"></div>
+<form id="biaodan">
+<div class="kuan5" id="touxiang"><img  src="images/supermarket.png" ></div>
+<div class="kuan4" style="margin-top:8%">
+   <div class="inp" ><span class="rentou"><img src="images/img21_07.png" /></span><div><input type="text" placeholder="用户名" name="username" class="codein" id="usernm" ng-model="Login.username"/></div></div> 
+</div>
+<div class="kuan4">
+   <div class="inp"><span class="rentou"><img src="images/img21_10.png" /></span><div><input type="password" placeholder="密码" name="password" class="codein" ng-model="Login.password" id="pass"/></div><span class="chacha"></div>  
+</div>
+
+<div class="anniu1 login" style=" margin-top:12%" ng-click="Login.LoginIn();"><a>点击登录</a></div>
+<div class="wangji"><span ng-click="Login.topickcode();">忘记密码?</span><span style="margin-left:10px" ng-click="Login.register();">注册账号</span><span><img src="images/jiantou.png"></span></div>
+ <div ><img src="images/disanfang.jpg"></div>
+<div  class="disanfang"><img ng-click="Login.weixinLogin();" class="second" src="images/weixindenglu.png"></div>
+</form>
+</body>
+</html>

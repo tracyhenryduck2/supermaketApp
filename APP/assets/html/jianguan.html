@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="Jianguan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>市场监管</title>
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jianguan.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  .current{  color:#e9a81a;}
+  .head {position:fixed;left:0px;top:0px;width:100%;background-color: white;}
+
+</style>
+</head>
+
+<body ng-controller="JianguanController as Jianguan">
+<div class="head"><div  class="tongzi"><a ng-class="{'current':Jianguan.listId==1}" ng-click="Jianguan.change(1)"><span class="tubiao"><img ng-show="Jianguan.listId!=1" src="images/zcfg.png"><img ng-show="Jianguan.listId==1" src="images/zcfg_s.png"></span>政策法规</a><a ng-class="{'current':Jianguan.listId==2}" ng-click="Jianguan.change(2)"><span class="tubiao"><img ng-show="Jianguan.listId!=2" src="images/tzgg.png"><img ng-show="Jianguan.listId==2" src="images/tzgg_s.png"></span>通知公告</a><a ng-class="{'current':Jianguan.listId==3}" ng-click="Jianguan.change(3)"><span class="tubiao"><img ng-show="Jianguan.listId!=3" src="images/jgdt.png"><img ng-show="Jianguan.listId==3" src="images/jgdt_s.png"></span>监管动态</a>
+<div class="clear"></div>
+</div></div>
+
+<div style="margin-top:60px">
+<div class="ship3" ng-repeat="map in Jianguan.zhenglist" ng-show="Jianguan.listId==1" ng-click="Jianguan.Detail(map.id,1)">
+  <!-- <div  class="xinwenbiaoti1"><img ng-src="http://{{Jianguan.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div> -->
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="ship3" ng-repeat="map in Jianguan.tonglist" ng-show="Jianguan.listId==2" ng-click="Jianguan.Detail(map.id,2)">
+  <!-- <div  class="xinwenbiaoti1"><img ng-src="http://{{Jianguan.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div> -->
+  <div  class="xinwenwenzi2">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+<div class="ship3" ng-repeat="map in Jianguan.shilist" ng-show="Jianguan.listId==3" ng-click="Jianguan.Detail(map.id,3)">
+  <div  class="xinwenbiaoti1"><img ng-if="map.pic_url==''" src="images/default.png"   alt=""/><img ng-if="map.pic_url!=''" ng-src="http://{{Jianguan.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div>
+  <div  class="xinwenwenzi1">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p  class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+</div>
+</body>
+</html>

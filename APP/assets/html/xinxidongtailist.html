@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="NewsList">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>信息动态列表</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery1.9.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/xinxidongtailist.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body ng-controller="NewsListController as NewsList">
+<div class="xinwen1" ng-repeat="map in NewsList.list" ng-click="NewsList.Detail(map.id)">
+  <div class="xinwenbiaoti1"><img ng-if="map.pic_url==null || map.pic_url==''" src="images/default.png"  alt=""/><img ng-if="map.pic_url!=null && map.pic_url!=''" ng-src="http://{{NewsList.url}}/supermarket_images/news/{{map.pic_url}}"  alt=""/></div>
+  <div  class="xinwenwenzi1">
+    <p  class="xwbt"><span style="font-size:1.8em">·</span>{{map.title}}</p>
+    <p class="xwbt1">{{map.digest}}</p>
+               <p class="xwbt2">>>MORE</p>
+  </div>
+</div>
+</body>
+</html>
