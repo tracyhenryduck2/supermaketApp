@@ -35,7 +35,7 @@ public class BaseService {
 //	public static String ServerPath = "192.168.1.26:88";
 //	public final static String ServerPath = "192.168.1.156:8080";
 //	public final static String ServerPath = "t1.zed1.cn:88";
-	public static String ServerPath = "112.33.1.143:88";
+	public static String ServerPath = "112.33.21.65:88";
 //	public static String ServerPath = "192.168.1.103:8080";
 	public static String ApkVerUrl = "http://" + ServerPath
 			+ "/app/transparentmarket.ver";
